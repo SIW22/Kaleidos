@@ -12,9 +12,6 @@
 ![ERD](images/byprice.jpg)
 ![ERD](images/cart.jpg)
 ![ERD](images/purchase.jpg)
-![ERD](images/Models.png)
-
-
 
 ## User Stories
 
@@ -75,7 +72,8 @@ USERS:
 ## DB Models and ERD
 ---
 ### ERD:
-![ERD](images/Models.jpg)
+![ERD](images/models.jpg)
+
 
 ### MODELS:
 - clothing
