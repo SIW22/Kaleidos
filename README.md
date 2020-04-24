@@ -3,16 +3,16 @@
 
 ## Wireframes
 ---
-![ERD](images/images/coversheet.jpg)
-![ERD](images/images/login.jpg)
-![ERD](images/images/register.jpg)
-![ERD](images/images/browseall.jpg)
-![ERD](images/images/bybrand.jpg)
-![ERD](images/images/bystyle.jpg)
-![ERD](images/images/byprice.jpg)
-![ERD](images/images/cart.jpg)
-![ERD](images/images/purchase.jpg)
-![ERD](images/images/Models.png)
+![ERD](images/coversheet.jpg)
+![ERD](images/login.jpg)
+![ERD](images/register.jpg)
+![ERD](images/browseall.jpg)
+![ERD](images/bybrand.jpg)
+![ERD](images/bystyle.jpg)
+![ERD](images/byprice.jpg)
+![ERD](images/cart.jpg)
+![ERD](images/purchase.jpg)
+![ERD](images/Models.png)
 
 
 
@@ -75,7 +75,7 @@ USERS:
 ## DB Models and ERD
 ---
 ### ERD:
-![ERD](images/Models.png)
+![ERD](images/Models.jpg)
 
 ### MODELS:
 - clothing
