@@ -23,7 +23,6 @@ router.get('/', (req, res) => {
 });
 
 
-
 /* -------------- GET Products New -------------- */
 router.get('/new', (req, res) => {
     db.Product.find({}, (err, allProducts) => {
@@ -38,51 +37,69 @@ router.get('/new', (req, res) => {
 });
 
 
-
 /* ------------ POST Products Create ------------ */
 router.post('/', (req, res) => {
     db.Product.create(req.body, (err, newProduct) => {
         if (err) {
             return res.send(err);
         }
-        res.redirect('/products', {
-            product: newProduct,
+        res.redirect('/products')
+        });
+    });
+
+
+/* ------------- GET Products Show ------------- */
+router.get('/:id', (req, res) => {
+    db.Product.findById(req.params.id, (err, foundProduct) => {
+        if (err) {
+            return res.send(err);
+        }
+        res.render('products/show', {
+            product: foundProduct,
+            title: 'Product Details',
         });
     });
 });
 
 
-
-/* ------------- GET Products Show ------------- */
-// router.get('/:id', (req, res) => {
-//     db.Product.findById(req.params.id, (err, foundProduct) => {
-//         if (err) {
-//             return res.send(err);
-//         }
-//         res.render('products/show', {
-//             product: foundProduct,
-//             title: 'Product Details',
-//         });
-//     });
-// });
-
-
-
 /* ------------- GET Products Edit ------------- */
-
-
+router.get('/:id/edit', (req, res) => {
+    db.Product.findById(req.params.id, (err, foundProduct) => {
+        if (err) {
+            return res.send(err);
+        }
+        res.render('products/edit', {
+            product: foundProduct,
+            title: 'Edit Product',
+        });
+    });
+});
 
 
 /* ------------ PUT Products Update ------------ */
-
-
+router.put('/:id/', (req, res) => {
+    db.Product.findByIdAndUpdate(
+        req.params.id,
+        req.body,
+        {new: true},
+        (err, updatedProduct) => {
+            if (err) {
+                return res.send(err);
+            }
+            res.redirect(`/products/${updatedProduct.id}`);
+        });
+});
 
 
 /* ---------- DELETE Products Destroy ---------- */
-
-
-
-
+router.delete('/:id', (req, res) => {
+    db.Product.findByIdAndDelete(req.params.id, (err, deletedProduct) => {
+        if (err) {
+            return res.send(err);
+        }
+        res.redirect('/products');
+    });
+});
 
 
 
