@@ -1,0 +1,32 @@
+<%- include('../partials/_head') %>
+
+  <main>
+    <h1>Add New Product</h1>
+
+    <form action="/products" method="POST">
+      <div>
+        <label for="brand">Brand:</label><br />
+        <input type="text" id="brand" name="brand" />
+      </div>
+      <br />
+      <div>
+        <label for="name">Name:</label><br />
+        <input type="text" id="name" name="name" />
+      </div>
+      <br />
+      <div>
+        <label for="description">Description:</label><br />
+        <textarea name="description" id="description" cols="30" rows="10"></textarea>
+      </div>
+      <br />
+      <div>
+        <label for="image">Image:</label><br />
+        <input type="text" id="image" name="image" />
+      </div>
+      <br />
+      
+      <button type="submit">Add Product</button>
+    </form>
+  </main>
+
+<%- include('../partials/_footer') %>
