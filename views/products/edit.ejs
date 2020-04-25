@@ -1,0 +1,33 @@
+<%- include('../partials/_head') %>
+
+    <main>
+        <h1>Edit Product</h1>
+
+        <form action="/products/<%= product._id %>?_method=PUT" method="POST">
+            <div>
+                <label for="brand">Brand:</label><br />
+                <input type="text" id="brand" name="brand" value="<%= product.brand %>"/>
+            </div>
+            <br />
+
+            <div>
+                <label for="itemName">Item Name:</label><br />
+                <input type="text" id="itemName" name="itemName" value="<%= product.itemName %>"/>
+            </div>
+            <br />
+
+            <div>
+                <label for="description">Description:</label><br />
+                <textarea name="description" id="description" cols="30" rows="10"><%= product.description %></textarea>
+            </div>
+            <br />
+
+            <div>
+                <label for="image">Image:</label><br />
+                <input type="text" id="image" name="image" value="<%= product.image %>"/>
+            </div>
+            <button type="submit">Update Product</button>
+        </form>
+    </main>
+
+<%- include('../partials/_footer') %>

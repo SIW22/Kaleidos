@@ -4,5 +4,21 @@
         <h1>Product Details</h1>
     </main>
 
+    <section>
+        <h2><strong><%= product.brand %></strong> </h2>
+        <p><strong>Item name</strong>: <%= product.itemName %></p>
+        <p><strong>Description</strong>: <%= product.description %></p>
+        <p><strong>Image</strong>: <%= product.image %></p>
+    </section>
+
+    <section>
+        <form action="/products/<%= product._id %>?_method=DELETE" method="POST">
+            <button type="submit">Delete Product</button>
+        </form>
+        <a href="/products/<%= product._id %>/edit">
+            <button>Edit Product</button>
+        </a>
+    </section>
+
 
 <%- include('../partials/_footer') %>
