@@ -1,6 +1,6 @@
 const express = require('express');
 const multer = require('multer');
-const upload = multer({dest: 'uploads/'});
+const upload = multer({dest: __dirname + 'uploads/'});
 const session = require('express-session');
 const methodOverride = require('method-override');
 const bodyParser = require('body-parser');
@@ -17,8 +17,10 @@ const authController = require('./controllers/authController');
 
 /* -------------- SET VIEW ENGINE -------------- */
 app.set('view engine', 'ejs');
+
 // allows us to use CSS
-app.use('/static', express.static(__dirname + '/node_modules/'));
+// app.use('/static', express.static(__dirname + '/node_modules/'));
+app.use(express.static('views/partials'))
 
 
 /* ---------------- MIDDLEWARE ---------------- */
@@ -54,14 +56,14 @@ app.use('/products', productsController);
 // Auth Route
 app.use('/auth', authController);
 
-
-// Image Upload Route
-app.post('/products', upload.single('file', (req, res, next) => {
-    console.log(req.file);
-    return res.status(200).send(req.file);
+// Image Upload Route - source: niinpatel
+app.post('/upload', upload.single('photo', (req, res) => {
+    if (req.file) {
+        res.json(req.file);
+    } else {
+        return res.send(err);
+    }
 }));
-
-
 
 /* ---------------- EVENT LISTENER ---------------- */
 app.listen(port, () => console.log(`Server is running on port ${port}`));
