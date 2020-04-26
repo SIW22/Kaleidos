@@ -24,8 +24,9 @@
 
             <div>
                 <label for="image">Image:</label><br />
-                <input type="text" id="image" name="image" value="<%= product.image %>"/>
+                <%- include('../partials/_image') %>
             </div>
+            <br />
             <button type="submit">Update Product</button>
         </form>
     </main>

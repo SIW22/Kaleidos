@@ -1,4 +1,6 @@
 const express = require('express');
+const multer = require('multer');
+const upload = multer({dest: 'uploads/'});
 const session = require('express-session');
 const methodOverride = require('method-override');
 const bodyParser = require('body-parser');
@@ -15,6 +17,8 @@ const authController = require('./controllers/authController');
 
 /* -------------- SET VIEW ENGINE -------------- */
 app.set('view engine', 'ejs');
+// allows us to use CSS
+app.use('/static', express.static(__dirname + '/node_modules/'));
 
 
 /* ---------------- MIDDLEWARE ---------------- */
@@ -49,6 +53,13 @@ app.use('/products', productsController);
 
 // Auth Route
 app.use('/auth', authController);
+
+
+// Image Upload Route
+app.post('/products', upload.single('file', (req, res, next) => {
+    console.log(req.file);
+    return res.status(200).send(req.file);
+}));
 
 
 
