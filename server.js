@@ -21,7 +21,7 @@ app.set('view engine', 'ejs');
 // allows us to use CSS
 // app.use('/static', express.static(__dirname + '/node_modules/'));
 app.use(express.static('views/partials'))
-
+app.use(express.static('public'));
 
 /* ---------------- MIDDLEWARE ---------------- */
 // Express Session
