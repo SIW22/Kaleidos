@@ -7,7 +7,7 @@
             </li>
 
             <li>
-                <a href="" class="navButton mainButton" id="Lbutton">Login/Register</a>
+                <a href="" class="navButton" id="navLbutton">Login/Register</a>
             </li>
 
             <li>
@@ -29,7 +29,7 @@
             <form action="">
                 <input class="field" type="text" placeholder="Username">
                 <input class="field" type="text" placeholder="Password">
-                <a href="" class="button">Submit</a>
+                <a href="" class="submitButton">Submit</a>
                 <button class="mainButton" id="Rbutton">Register</button>
             </form>
         </div>
@@ -45,13 +45,15 @@
                 <input class="field" type="text" placeholder="Email">
                 <input class="field" type="text" placeholder="Password">
                 <input class="field" type="text" placeholder="Confirm Password">
-                <a href="" class="button">Submit</a>
+                <a href="" class="submitButton">Submit</a>
+                <button class="mainButton" id="Lbutton">Login</button>
             </form>
         </div>
     </div>
 </main>
 
 <script>
+    const navLbutton = document.getElementById('navLbutton');
     const Lbutton = document.getElementById('Lbutton');
     const Rbutton = document.getElementById('Rbutton');
     const Lclose = document.querySelector('.closeL');
@@ -60,25 +62,31 @@
     const bgModalR = document.querySelector('.bg-modalR');
     
     
-    Lbutton.addEventListener('click', () => {
-      bgModalL.style.display = 'flex';
+    navLbutton.addEventListener('click', () => {
+        bgModalL.style.display = 'flex';
+        event.preventDefault();
     });
     
     Lclose.addEventListener('click', () => {
-      bgModalL.style.display = 'none';
+         bgModalL.style.display = 'none';
     });
     
     
     Rbutton.addEventListener('click', () => {
-      bgModalL.style.display = 'none';
-      bgModalR.style.display = 'flex';
-      event.preventDefault();
-      console.log('button clicked');
+        bgModalL.style.display = 'none';
+        bgModalR.style.display = 'flex';
+        event.preventDefault();
     });
+
+    Lbutton.addEventListener('click', () => {
+        bgModalR.style.display = 'none';
+        bgModalL.style.display = 'flex';
+        event.preventDefault();  
+    })
     
     Rclose.addEventListener('click', () => {
-      bgModalR.style.display = 'none';
-      console.log('close button clicked');
+        bgModalR.style.display = 'none';
+        console.log('close button clicked');
     });
     
     </script>

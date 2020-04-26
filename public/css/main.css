@@ -1,13 +1,13 @@
 body {
 	margin: 0;
-	background-color: rgba(0, 0, 0, 0.7);
+	/* background-color: rgba(0, 0, 0, 0.7); */
   }
   
-  /* Register */
+  /* Register Modal */
   .bg-modalR {
 	width: 100%;
 	height: 100%;
-	background-color: rgba(255, 255, 255, 0.5);
+	background-color: rgba(0, 0, 0, 0.25);
 	position: absolute;
 	top: 0;
 	display: flex;
@@ -36,11 +36,11 @@ body {
 	cursor: pointer;
   }
   
-  /* Login */
+  /* Login Modal */
   .bg-modalL {
 	width: 100%;
 	height: 100%;
-	background-color: rgba(255, 255, 255, 0.5);
+	background-color: rgba(0, 0, 0, 0.25);
 	position: absolute;
 	top: 0;
 	display: flex;
@@ -57,6 +57,7 @@ body {
 	text-align: center;
 	padding: 20px;
 	position: relative;
+	box-shadow: -8px 8px 8px black;
   }
   
   .closeL {
@@ -69,9 +70,12 @@ body {
   }
   
   /* Universal */
-  input {
-	width 50%;
+  .field {
 	display: block;
+	height: 30px;
+	width: 250px;
+	padding: 7px;
+	color: white;
 	margin: 10px auto 10px auto;  
 	background-color: #58AFDB;
 	border: none;
@@ -79,13 +83,7 @@ body {
 	text-align: center;
 	font-size: 18px;
   }
-  
-  .field {
-	height: 30px;
-	width: 250px;
-	padding: 7px;
-	color: white;
-  }
+
   .field:focus {
 	background-color: #2194C1;
 	box-shadow: inset 0 0 7px #000000;
@@ -96,7 +94,7 @@ body {
 	color: rgba(255, 255, 255, 0.5);
   }
   
-  .button {
+  .submitButton {
 	background-color: #58AFDB;
 	color: white;
 	font-size: 20px;
@@ -106,16 +104,16 @@ body {
 	line-height: 75px;
   }
   
-  .button:focus {
+  .submitButton:focus {
 	outline: none;
   }
   
-  .button:hover {
+  .submitButton:hover {
 	cursor: pointer;
 	transform: scale(1.1);
   }
   
-  .mainButton {
+  #Rbutton {
 	background-color: #58AFDB;
 	color: white;
 	padding: 10px; 
@@ -128,12 +126,33 @@ body {
 	line-height: 25px;
   }
   
-  .mainbutton:focus {
+  #Rbutton:focus {
 	outline: none;
   }
   
-  .mainbutton:hover {
+  #Rbutton:hover {
 	cursor: pointer;
 	transform: scale(1.1);
   }
   
+  #Lbutton {
+	background-color: #58AFDB;
+	color: white;
+	padding: 10px; 
+	width: 100px;
+	border: none;
+	margin: 10px 7px;
+	border-radius: 8px;
+	font-size: 18px;
+	text-decoration: none;
+	line-height: 25px;
+  }
+  
+  #Lbutton:focus {
+	outline: none;
+  }
+  
+  #Lbutton:hover {
+	cursor: pointer;
+	transform: scale(1.1);
+  }
