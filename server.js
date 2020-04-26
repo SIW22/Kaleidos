@@ -2,6 +2,7 @@ const express = require('express');
 const session = require('express-session');
 const methodOverride = require('method-override');
 const bodyParser = require('body-parser');
+const dropzone = require('dropzone');
 
 const port = process.env.PORT || 4000;
 const app = express();
@@ -34,6 +35,8 @@ app.use(methodOverride('_method'));
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
+// Dropzone
+app.use(dropzone());
 
 
 /* ---------------- ROUTES ---------------- */
