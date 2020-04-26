@@ -1,0 +1,139 @@
+body {
+	margin: 0;
+	background-color: rgba(0, 0, 0, 0.7);
+  }
+  
+  /* Register */
+  .bg-modalR {
+	width: 100%;
+	height: 100%;
+	background-color: rgba(255, 255, 255, 0.5);
+	position: absolute;
+	top: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	display: none;
+  }
+  
+  .modalR {
+	width: 400px;
+	height: 400px;
+	background-color: white;
+	border-radius: 25px;
+	text-align: center;
+	padding: 20px;
+	position: relative;
+	
+  }
+  
+  .closeR {
+	position: absolute;
+	top: 0;
+	right: 14px;
+	font-size: 38px;
+	transform: rotate(45deg);
+	cursor: pointer;
+  }
+  
+  /* Login */
+  .bg-modalL {
+	width: 100%;
+	height: 100%;
+	background-color: rgba(255, 255, 255, 0.5);
+	position: absolute;
+	top: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	display: none;
+  }
+  
+  .modalL {
+	width: 400px;
+	height: 250px;
+	background-color: white;
+	border-radius: 25px;
+	text-align: center;
+	padding: 20px;
+	position: relative;
+  }
+  
+  .closeL {
+	position: absolute;
+	top: 0;
+	right: 14px;
+	font-size: 38px;
+	transform: rotate(45deg);
+	cursor: pointer;
+  }
+  
+  /* Universal */
+  input {
+	width 50%;
+	display: block;
+	margin: 10px auto 10px auto;  
+	background-color: #58AFDB;
+	border: none;
+	border-radius: 7px;
+	text-align: center;
+	font-size: 18px;
+  }
+  
+  .field {
+	height: 30px;
+	width: 250px;
+	padding: 7px;
+	color: white;
+  }
+  .field:focus {
+	background-color: #2194C1;
+	box-shadow: inset 0 0 7px #000000;
+	outline: none;
+  }
+  
+  ::placeholder {
+	color: rgba(255, 255, 255, 0.5);
+  }
+  
+  .button {
+	background-color: #58AFDB;
+	color: white;
+	font-size: 20px;
+	padding: 11px 14px;
+	border-radius: 8px;
+	text-decoration: none;
+	line-height: 75px;
+  }
+  
+  .button:focus {
+	outline: none;
+  }
+  
+  .button:hover {
+	cursor: pointer;
+	transform: scale(1.1);
+  }
+  
+  .mainButton {
+	background-color: #58AFDB;
+	color: white;
+	padding: 10px; 
+	width: 100px;
+	border: none;
+	margin: 10px 7px;
+	border-radius: 8px;
+	font-size: 18px;
+	text-decoration: none;
+	line-height: 25px;
+  }
+  
+  .mainbutton:focus {
+	outline: none;
+  }
+  
+  .mainbutton:hover {
+	cursor: pointer;
+	transform: scale(1.1);
+  }
+  

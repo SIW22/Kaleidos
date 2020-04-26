@@ -1,21 +1,87 @@
 <header>
     <nav>
         <ul>
+
             <li>
-                <a href="/">Home</a>
+                <a href="/" class="navButton" id="trendingLogo" >Home</a>
             </li>
+
             <li>
-                <a href="/auth/login">Login</a>
+                <a href="" class="navButton mainButton" id="Lbutton">Login/Register</a>
             </li>
+
             <li>
-                <a href="/auth/register">Register</a>
+                <a href="/products" class="navButton">My Products</a>
             </li>
+
             <li>
-                <a href="/products">My Products</a>
+                <a href="/products/new" class="navButton">Add Product</a>
             </li>
-            <li>
-                <a href="/products/new">Add Product</a>
-            </li>
+
         </ul>
     </nav>
 </header>
+<main>
+    <div class="bg-modalL">
+        <div class="modalL">
+            <div class="closeL">+</div>
+            <h2>Login to your account</h2>
+            <form action="">
+                <input class="field" type="text" placeholder="Username">
+                <input class="field" type="text" placeholder="Password">
+                <a href="" class="button">Submit</a>
+                <button class="mainButton" id="Rbutton">Register</button>
+            </form>
+        </div>
+      </div>
+  
+      <div class="bg-modalR">
+        <div class="modalR">
+            <div class="closeR">+</div>
+            <h2>Register your account</h2>
+            <form action="">
+                <input class="field" type="text" placeholder="Full Name">
+                <input class="field" type="text" placeholder="Username">
+                <input class="field" type="text" placeholder="Email">
+                <input class="field" type="text" placeholder="Password">
+                <input class="field" type="text" placeholder="Confirm Password">
+                <a href="" class="button">Submit</a>
+            </form>
+        </div>
+    </div>
+</main>
+
+<script>
+    const Lbutton = document.getElementById('Lbutton');
+    const Rbutton = document.getElementById('Rbutton');
+    const Lclose = document.querySelector('.closeL');
+    const Rclose = document.querySelector('.closeR');
+    const bgModalL = document.querySelector('.bg-modalL');
+    const bgModalR = document.querySelector('.bg-modalR');
+    
+    
+    Lbutton.addEventListener('click', () => {
+      bgModalL.style.display = 'flex';
+    });
+    
+    Lclose.addEventListener('click', () => {
+      bgModalL.style.display = 'none';
+    });
+    
+    
+    Rbutton.addEventListener('click', () => {
+      bgModalL.style.display = 'none';
+      bgModalR.style.display = 'flex';
+      event.preventDefault();
+      console.log('button clicked');
+    });
+    
+    Rclose.addEventListener('click', () => {
+      bgModalR.style.display = 'none';
+      console.log('close button clicked');
+    });
+    
+    </script>
+
+
+
