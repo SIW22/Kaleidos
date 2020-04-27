@@ -3,15 +3,15 @@
 
 ## Wireframes
 ---
-![ERD](images/coversheet.jpg)
-![ERD](images/login.jpg)
-![ERD](images/register.jpg)
-![ERD](images/browseall.jpg)
-![ERD](images/bybrand.jpg)
-![ERD](images/bystyle.jpg)
-![ERD](images/byprice.jpg)
-![ERD](images/cart.jpg)
-![ERD](images/purchase.jpg)
+![ERD](public/images/coversheet.jpg)
+![ERD](public/images/login.jpg)
+![ERD](public/images/register.jpg)
+![ERD](public/images/browseall.jpg)
+![ERD](public/images/bybrand.jpg)
+![ERD](public/images/bystyle.jpg)
+![ERD](public/images/byprice.jpg)
+![ERD](public/images/cart.jpg)
+![ERD](public/images/purchase.jpg)
 
 ## User Stories
 
@@ -72,7 +72,7 @@ USERS:
 ## DB Models and ERD
 ---
 ### ERD:
-![ERD](images/models.jpg)
+![ERD](public/images/models.jpg)
 
 
 ### MODELS:
