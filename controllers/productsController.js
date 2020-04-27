@@ -39,11 +39,13 @@ router.get('/new', (req, res) => {
 
 /* ------------ POST Products Create ------------ */
 router.post('/', (req, res) => {
+    console.log('hi James!');
     db.Product.create(req.body, (err, newProduct) => {
         if (err) {
             return res.send(err);
         }
         res.redirect('/products')
+        console.log('hello.');
         });
     });
 
