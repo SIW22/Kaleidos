@@ -11,11 +11,15 @@
             </li>
 
             <li>
-                <a href="/products" class="navButton">My Products</a>
+                <a href="/products" class="navButton" id="productsLink">My Products</a>
             </li>
 
             <li>
                 <a href="" class="navButton" id="navPbutton">Add Product</a>
+            </li>
+
+            <li>
+                <a href="/logout" class="navButton" id="navLogoutButton">Logout</a>
             </li>
 
         </ul>
@@ -32,9 +36,11 @@
 
                 <input class="field" type="text" id="password" name="password" placeholder="Password">
 
-                <a href="" class="submitButton">Submit</a>
-
+                <!-- <a href="" class="submitButton">Submit</a> -->
                 <button class="mainButton" id="Rbutton">Register</button>
+
+                <input type="submit" class="submitButton" value="Submit">
+
             </form>
         </div>
     </div>
@@ -55,9 +61,12 @@
 
                 <input class="field" type="text" id="password2" name="password2" placeholder="Confirm Password">
 
-                <a href="" class="submitButton">Submit</a>
+                <!-- <a href="" class="submitButton">Submit</a> -->
 
                 <button class="mainButton" id="Lbutton">Login</button>
+
+                <input type="submit" class="submitButton" value="Submit">
+
 
             </form>
         </div>
@@ -75,11 +84,10 @@
 
                 <textarea class="field" name="description" id="description" cols="30" rows="10" placeholder="Description"></textarea>
 
-                <label for="image">Image Upload:</label>
+                <!-- <label for="image">Image Upload:</label>
 
-                <%- include('../partials/_image') %>
-
-                <a href="" class="submitButton">Add Product</a>
+                <a href="" class="submitButton">Add Product</a> -->
+                <input type="submit" id="addProductSubmit" class="submitButton" value="Add Product">
 
             </form>
         </div>
@@ -108,9 +116,13 @@
     });
     
     Lclose.addEventListener('click', () => {
-         bgModalL.style.display = 'none';
+        bgModalL.style.display = 'none';
     });
     
+    // bgModalL.addEventListener('click', () => {
+    //     bgModalL.style.display = 'none';
+    //     event.preventDefault();
+    // });
     
     Rbutton.addEventListener('click', () => {
         bgModalL.style.display = 'none';
@@ -128,6 +140,11 @@
         bgModalR.style.display = 'none';
     });
 
+    // bgModalR.addEventListener('click', () => {
+    //     bgModalR.style.display = 'none';
+    //     event.preventDefault();
+    // });
+
     navPbutton.addEventListener('click', () => {
         bgModalP.style.display = 'flex';
         event.preventDefault();
@@ -136,6 +153,11 @@
     Pclose.addEventListener('click', () => {
         bgModalP.style.display = 'none';
     });
+
+    // ModalP.addEventListener('click', () => {
+    //     bgModalP.style.display = 'none';
+    //     event.preventDefault();
+    // });
     
     document.onkeydown = function(event) {
         event = event || window.event;
