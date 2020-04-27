@@ -24,17 +24,14 @@ h1 {
 
 h3 {
     text-align: center;
+    margin-top: 0;
     letter-spacing: 1.5px;
 }
 
-.fa-arrow-circle-right {
-    font-size: 35px;
+.arrow-button {
+    height: 37px;
+    margin-top: 12%;
     margin-left: 46%;
-    margin-top: 10%;
-}
-
-.fa-arrow-circle-right:hover {
-    transform: scale(1.2);
 }
 
 footer {
@@ -46,4 +43,3 @@ footer {
     background-color: black;
     color: white;
 }
-
