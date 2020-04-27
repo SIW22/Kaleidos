@@ -69,7 +69,7 @@ router.post('/login', async (req,res) => {
 		console.log('user confirmed', req.session);
 		req.session.currentUser = user._id;
 		console.log(req.session);
-		res.redirect('index');
+		res.redirect('../products');
 	} catch (err) {
 		res.send(err);
 	}
