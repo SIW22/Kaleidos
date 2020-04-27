@@ -3,17 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
     <link href="/css/home.css" rel="stylesheet">
     <title>Trending || <%= title %> </title>
 </head>
 <body> 
     <div class="bg">
-        <h1><strong>#</strong>trending</h1>
-        <h5>product, for people</h5>
+        <div class="title-slogan">
+            <h1>#trending</h1>
+            <h2><em>product, for people</em></h2>
+            <form action="/products">
+                <input class="arrow-button" type="image" img src="/images/arrow.png" alt="arrow-button"/>
+            </form>
+        </div>
     </div>
-
     <%- include('partials/_footer') %> 
 </body>
 </html>
-
-
