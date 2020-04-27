@@ -1,4 +1,5 @@
 const express = require('express');
+// image upload library - handles getting formdata from requests
 const multer = require('multer');
 const upload = multer({dest: __dirname + 'uploads/'});
 const session = require('express-session');
