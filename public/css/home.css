@@ -13,17 +13,33 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    letter-spacing: 1.5px;
 }
 
 h1 {
-    font-size: 110px;
+    font-size: 150px;
+    margin-top: 0;
+    margin-bottom: 0;
+    letter-spacing: 1.5px;
+}
+
+h3 {
+    text-align: center;
+    letter-spacing: 1.5px;
+}
+
+.fa-arrow-circle-right {
+    font-size: 35px;
+    margin-left: 46%;
+    margin-top: 10%;
+}
+
+.fa-arrow-circle-right:hover {
+    transform: scale(1.2);
 }
 
 footer {
     text-align: center;
     padding: 5px;
-    /* position: absolute */
     bottom: 0;
     width: 100%;
     position: fixed;
