@@ -3,17 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type="text/javascript">
-        Dropzone.options.ulWidget = {
-            paramName: 'file',
-            init: () => {
-                this.on('success', (file, resp) => {
-                    console.log(file);
-                    console.log(resp);
-                });
-            };
-        };
-    </script>
     <link href="/css/main.css" rel="stylesheet">
     <title>Trending || <%= title %> </title>
 </head>
