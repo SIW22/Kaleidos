@@ -3,12 +3,14 @@ const express = require('express');
 const multer = require('multer');
 const upload = multer({dest: __dirname + 'uploads/'});
 const session = require('express-session');
-const methodOverride = require('method-override');
 const bodyParser = require('body-parser');
+const methodOverride = require('method-override');
+require('dotenv').config();
 
 const port = process.env.PORT || 4000;
 const app = express();
 
+console.log('The value of test = ', process.env.NEW_TEST);
 
 /* ---------------- CONTROLLERS ---------------- */
 const productsController = require('./controllers/productsController');
@@ -27,7 +29,7 @@ app.use(express.static('public'));
 /* ---------------- MIDDLEWARE ---------------- */
 // Express Session
 app.use(session({
-    secret: 'bsrhgbksjrbfkjbrd',
+    secret: process.env.SESSION_SECRET, // how we verify we created this cookie
     resave: false,
     saveUninitialized: false,
 }));
