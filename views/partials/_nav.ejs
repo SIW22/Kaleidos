@@ -137,6 +137,15 @@
         bgModalP.style.display = 'none';
     });
     
+    document.onkeydown = function(event) {
+        event = event || window.event;
+        if (event.keyCode == 27) {
+            bgModalL.style.display = 'none';
+            bgModalR.style.display = 'none';
+            bgModalP.style.display = 'none';
+        }
+    };
+
     </script>
 
 
