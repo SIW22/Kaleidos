@@ -1,12 +1,23 @@
 const express = require('express');
 const router = express.Router();
 
+const multipart = require('connect-multiparty');
+const multipartMiddleware = multipart();
+const cloudinary = require('cloudinary');
+
 
 /* ----------------- DATABASE ----------------- */
 const db = require('../models');
 
 
 // PATH = '/products'
+
+/* ----------------- CONFIG ----------------- */
+cloudinary.config({
+    cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+    api_key: process.env.CLOUDINARY_API_KEY,
+    api_secret: process.env.CLOUDINARY_API_SECRET
+});
 
 
 /* ------------ GET Products Index ------------ */
@@ -38,16 +49,24 @@ router.get('/new', (req, res) => {
 
 
 /* ------------ POST Products Create ------------ */
-router.post('/', (req, res) => {
-    console.log('hi James!');
-    db.Product.create(req.body, (err, newProduct) => {
-        if (err) {
-            return res.send(err);
+router.post('/', multipartMiddleware, (req,res) => {
+    let body = (req.body);
+    cloudinary.uploader.upload(req.files.image.path, (result) => {
+        console.log('from cloudinary', result);
+        body = {
+            ...body,
+            image: result.secure_url
         }
-        res.redirect('/products')
-        console.log('hello.');
+        console.log(body);
+        db.Product.create(body, (err, newProduct) => {
+            if (err) {
+                return console.log(err);
+            }
+            res.redirect('/products');
+            console.log('hello');
         });
     });
+});
 
 
 /* ------------- GET Products Show ------------- */

@@ -3,7 +3,8 @@
     <main>
         <h1>Edit Product</h1>
 
-        <form action="/products/<%= product._id %>?_method=PUT" method="POST">
+        <form action="/products/<%= product._id %>?_method=PUT" method="POST" enctype="multipart/form-data" class="form">
+
             <div>
                 <label for="brand">Brand:</label><br />
                 <input type="text" id="brand" name="brand" value="<%= product.brand %>"/>
@@ -22,11 +23,14 @@
             </div>
             <br />
 
-            <!-- <div>
+            <div>
                 <label for="image">Image:</label><br />
-                <%- include('../partials/_image') %><br />
-                <input type="submit" value="Update Product">
-            </div> -->
+                <input type="file" name="image" />
+              </div>
+              <br />
+
+            <input type="submit" value="Update Product">
+            
         </form>
     </main>
 
