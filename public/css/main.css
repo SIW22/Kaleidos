@@ -72,7 +72,7 @@ cursor: pointer;
 }
 
 /* Products Modal */
-#bg-modalP {
+/* #bg-modalP {
 width: 100%;
 height: 100%;
 background-color: rgba(0, 0, 0, 0.25);
@@ -102,7 +102,7 @@ right: 14px;
 font-size: 38px;
 transform: rotate(45deg);
 cursor: pointer;
-}
+} */
 
 /* Universal */
 .field {
@@ -158,9 +158,9 @@ box-shadow: -2px 2px 2px rgba(0, 0, 0, 0.75);
 
 }
 
-#addProductSubmit {
+/* #addProductSubmit {
 	width: 150px;
-}
+} */
 
 #Rbutton {
 background-color: #58AFDB;
