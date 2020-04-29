@@ -1,19 +1,37 @@
 <%- include('../partials/_head') %>
 
-  <main>
+  <main class="displayBody">
+
     <h1>All Products</h1>
     <a href="/products/new">Add Product</a>
 
   
-    <% products.forEach((product => { %>
+    <!-- <% products.forEach(product => { %>
      <section>
         <h4>
           <a href="/products/<%= product._id %>">
-            <img src="<%= product.image %>" alt="image" width="200px">
+            <img src="<%= product.image %>" alt="image" width="400px">
           </a>
+          <div class="imageOverlay"></div>
         </h4>
      </section>
-    <% })) %>
+    <% }) %> -->
+
+    <div class="background">
+      <div class="imageField">
+          
+        <% products.forEach(product => { %>
+          <a href="/products/<%= product._id %>" class="imageBlock">
+            <img src="<%= product.image %>" alt="image" width="400px">
+            <div class="imageOverlay">
+              <p><%= product.itemName %><span>click for description</span></p>
+            </div>
+          </a>
+          <% }); %>
+    
+      </div>  
+    </div>
+
   </main>
 
 <%- include('../partials/_footer') %>
