@@ -1,25 +1,37 @@
-<%- include('../partials/_head') %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/css/edit.css" rel="stylesheet">
+    <link href="/css/main.css" rel="stylesheet">
+    <title>Trending || <%= title %> </title>
+</head>
+
+<body>
+    <%- include('../partials/_nav') %>
+
 
     <main>
         <h1>Edit Product</h1>
 
-        <form action="/products/<%= product._id %>?_method=PUT" method="POST" enctype="multipart/form-data" class="form">
+        <form class="edit-product-form" action="/products/<%= product._id %>?_method=PUT" method="POST" enctype="multipart/form-data" class="form">
 
             <div>
                 <label for="brand">Brand:</label><br />
-                <input type="text" id="brand" name="brand" value="<%= product.brand %>"/>
+                <input type="text" id="brand" name="brand" value="<%= product.brand %>" maxlength="60" size="60"/>
             </div>
             <br />
 
             <div>
                 <label for="itemName">Item Name:</label><br />
-                <input type="text" id="itemName" name="itemName" value="<%= product.itemName %>"/>
+                <input type="text" id="itemName" name="itemName" value="<%= product.itemName %>" maxlength="60" size="60"/>
             </div>
             <br />
 
             <div>
                 <label for="description">Description:</label><br />
-                <textarea name="description" id="description" cols="30" rows="10"><%= product.description %></textarea>
+                <textarea name="description" id="description" cols="58" rows="10"><%= product.description %></textarea>
             </div>
             <br />
 
