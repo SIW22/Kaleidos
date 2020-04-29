@@ -23,6 +23,11 @@ h2 {
     letter-spacing: .75px;
 }
 
+.btn:hover {
+    background-color: lightgrey;
+    border-radius: 5px;
+}
+
 footer {
     text-align: center;
     padding: 5px;

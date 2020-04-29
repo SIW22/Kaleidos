@@ -17,11 +17,11 @@
         <p><%= product.description %></p>
 
         <a class="edit-product" href="/products/<%= product._id %>/edit">
-            <button>Edit Product</button>
+            <button class="btn edit-btn">Edit Product</button>
         </a>
 
         <form class="delete-product" action="/products/<%= product._id %>?_method=DELETE" method="POST">
-            <button type="submit">Delete Product</button>
+            <button class="btn delete-btn" type="submit">Delete Product</button>
         </form>
                         
     </div>
