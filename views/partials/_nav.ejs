@@ -1,4 +1,17 @@
 <header>
+<<<<<<< HEAD
+    <div class="siteBanner">
+        <div class="bannerImage">
+            <a href="/products">
+                <img src="/images/trending_banner_logo2.svg" alt="trending logo" height="100px" id="trendingLogo">
+            </a>
+        </div>
+        <div class="mainLinks">
+            <a href="" class="navButton" id="navLbutton">Login/Register</a>
+            <a href="/products" class="navButton" id="productsLink">My Products</a>
+        </div>
+    </div>
+=======
     <nav>
         <ul>
 
@@ -26,6 +39,7 @@
 
         </ul>
     </nav>
+>>>>>>> submaster
 </header>
 
 
@@ -101,9 +115,14 @@
     
 </main>
 
+<<<<<<< HEAD
+<script>    
+
+=======
 
 <!-- SCRIPT -->
 <script>
+>>>>>>> submaster
     const navLbutton = document.getElementById('navLbutton');
     const Lbutton = document.getElementById('Lbutton');
     const Lclose = document.getElementById('closeL');
@@ -128,16 +147,16 @@
     });
     
     // bgModalL.addEventListener('click', () => {
-    //     bgModalL.style.display = 'none';
-    //     event.preventDefault();
-    // });
+        //     bgModalL.style.display = 'none';
+        //     event.preventDefault();
+        // });
     
     Rbutton.addEventListener('click', () => {
         bgModalL.style.display = 'none';
         bgModalR.style.display = 'flex';
         event.preventDefault();
     });
-
+    
     Lbutton.addEventListener('click', () => {
         bgModalR.style.display = 'none';
         bgModalL.style.display = 'flex';
@@ -147,8 +166,22 @@
     Rclose.addEventListener('click', () => {
         bgModalR.style.display = 'none';
     });
-
+    
     // bgModalR.addEventListener('click', () => {
+<<<<<<< HEAD
+        //     bgModalR.style.display = 'none';
+        //     event.preventDefault();
+        // });
+        
+    navPbutton.addEventListener('click', () => {
+        bgModalP.style.display = 'flex';
+        event.preventDefault();
+    });
+    
+    Pclose.addEventListener('click', () => {
+        bgModalP.style.display = 'none';
+    });
+=======
     //     bgModalR.style.display = 'none';
     //     event.preventDefault();
     // });
@@ -166,7 +199,13 @@
     //     bgModalP.style.display = 'none';
     //     event.preventDefault();
     // });
+>>>>>>> submaster
     
+    // ModalP.addEventListener('click', () => {
+        //     bgModalP.style.display = 'none';
+        //     event.preventDefault();
+        // });
+        
     document.onkeydown = function(event) {
         event = event || window.event;
         if (event.keyCode == 27) {
