@@ -1,24 +1,29 @@
-<%- include('../partials/_head') %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/css/show.css" rel="stylesheet">
+    <link href="/css/main.css" rel="stylesheet">
+    <title>Trending || <%= title %> </title>
+</head>
 
-    <main>
-        <h1>Product Details</h1>
-    </main>
+<body>
+    <%- include('../partials/_nav') %>
 
-    <section>
-        <h2><strong><%= product.brand %></strong> </h2>
-        <p><strong>Item name</strong>: <%= product.itemName %></p>
-        <p><strong>Description</strong>: <%= product.description %></p>
-        <p><strong>Image:</strong><img src="<%= product.image %>" alt="image" height="200px"></p>
-    </section>
+    <div class="product-description">
+        <img class="show-product-picture" src="<%= product.image %>" alt="image" height="350px">
+        <h2><strong><%= product.brand %></strong> || <%= product.itemName %></h2>
+        <p><%= product.description %></p>
 
-    <section>
-        <form action="/products/<%= product._id %>?_method=DELETE" method="POST">
-            <button type="submit">Delete Product</button>
-        </form>
-        <a href="/products/<%= product._id %>/edit">
+        <a class="edit-product" href="/products/<%= product._id %>/edit">
             <button>Edit Product</button>
         </a>
-    </section>
 
-
+        <form class="delete-product" action="/products/<%= product._id %>?_method=DELETE" method="POST">
+            <button type="submit">Delete Product</button>
+        </form>
+                        
+    </div>
+ 
 <%- include('../partials/_footer') %>
