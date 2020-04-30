@@ -2,29 +2,14 @@
 
   <main class="displayBody">
 
-    <h1>All Products</h1>
-    <a href="/products/new">Add Product</a>
-
-  
-    <!-- <% products.forEach(product => { %>
-     <section>
-        <h4>
-          <a href="/products/<%= product._id %>">
-            <img src="<%= product.image %>" alt="image" width="400px">
-          </a>
-          <div class="imageOverlay"></div>
-        </h4>
-     </section>
-    <% }) %> -->
-
     <div class="background">
       <div class="imageField">
           
         <% products.forEach(product => { %>
           <a href="/products/<%= product._id %>" class="imageBlock">
-            <img src="<%= product.image %>" alt="image" width="400px">
+            <img class="image-proportion" src="<%= product.image %>" alt="image" >
             <div class="imageOverlay">
-              <p><%= product.itemName %><span>click for description</span></p>
+              <p class="overlay-text"><%= product.itemName %><span class="click-for-description">click for description</span></p>
             </div>
           </a>
           <% }); %>
