@@ -137,6 +137,10 @@ body {
 	z-index: 60;
 }
 
+#logout-btn {
+	display: none;
+}
+
 /* Register Modal */
 #bg-modalR {
 	width: 100%;
