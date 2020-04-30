@@ -4,7 +4,6 @@
 
     <div class="background">
       <div class="imageField">
-          
         <% products.forEach(product => { %>
           <a href="/products/<%= product._id %>" class="imageBlock">
             <img class="image-proportion" src="<%= product.image %>" alt="image" >
@@ -13,7 +12,11 @@
             </div>
           </a>
           <% }); %>
-    
+          <div class="add-div">
+            <a href="/products/new" class="imageBlock">
+              <img class="image-proportion"src="/images/add-button.png" alt="add-button">
+            </a>
+          </div>
       </div>  
     </div>
 
