@@ -3,6 +3,7 @@ const multipart = require('connect-multiparty');
 const multipartMiddleware = multipart();
 const cloudinary = require('cloudinary');
 const session = require('express-session');
+const MongoStore = require('connect-mongo')(session);
 const bodyParser = require('body-parser');
 const methodOverride = require('method-override');
 
@@ -33,6 +34,9 @@ app.use(express.static('public'));
 /* ---------------- MIDDLEWARE ---------------- */
 // Express Session
 app.use(session({
+    store: new MongoStore({
+        url: process.env.MONGODB_URI || 'mongodb://localhost:27017/trending',
+    }),
     secret: process.env.SESSION_SECRET, // how we verify we created this cookie
     resave: false,
     saveUninitialized: false,
