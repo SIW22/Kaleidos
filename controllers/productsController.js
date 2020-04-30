@@ -21,43 +21,20 @@ cloudinary.config({
 
 
 /* ------------ GET Products Index ------------ */
-router.get('/', (req, res) => {
+router.get('/', async (req, res) => {
     db.Product.find({}, (err, allProducts) => {
+        
         if (err) {
             return res.send(err);
         }
-        res.render('products/index', {
+        
+        return res.render('products/index', {
             products: allProducts,
             title: 'Products',
         });
-    });
+    }).sort({[req.query.sort]: req.query.order });
 });
 
-/* Sort By Category */
-// router.get('/category', (req, res) => {
-//     db.Product.find().sort({name: 1}, (err, ProductsByName) => {
-//         if (err) {
-//             return res.send(err);
-//         }
-//         res.render('products/name', {
-//             products: ProductsByName,
-//             title: 'Items By Name',
-//         });
-//     });
-// });
-
-/* Sort By Name */
-// router.get('/name', (req, res) => {
-//     db.Product.find({}, {"product_name": 1, _id:0}).sort({}) => {
-//         if (err) {
-//             return res.send(err);
-//         }
-//         res.render('products/name', {
-//             products: ProductsByName,
-//             title: 'Items By Name',
-//         });
-//     });
-// });
 
 /* -------------- GET Products New -------------- */
 router.get('/new', (req, res) => {
