@@ -283,6 +283,14 @@ body {
 	box-shadow: -2px 2px 2px rgba(100, 100, 100, 0.75);
 }
 
+#submit-new-btn, #submit-edit-btn {
+	text-align: center;
+}
+
+#submit-edit-btn {
+	width: 150px;
+}
+
 footer {
     text-align: center;
     padding: 5px;
@@ -398,7 +406,7 @@ footer {
 	color: #656471;
 }
 
-/* show page */
+/* show and edit page */
 .product-description {
     display: grid;
     /* margin-left: 50%;
@@ -439,6 +447,12 @@ footer {
     border-radius: 5px;
 } */
 
+.button-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 .delete-btn, .edit-btn {
 	background-color: #58AFDB;
 	color: white;
@@ -451,6 +465,7 @@ footer {
 	line-height: 25px;
 	transition: .3s ease-in-out;
 }
+
 /* 
 .delete-btn:focus, .edit-btn:focus {
 	outline: none;
@@ -479,6 +494,4 @@ footer {
 .title-text {
 	text-align: center;
 }
-
-/* edit page */
 

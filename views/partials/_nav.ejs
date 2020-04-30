@@ -75,23 +75,25 @@
         </div>
     </div> -->
 
-    <!-- <div id="bg-modalP">
+    <div id="bg-modalP">
         <div id="modalP">
             <div id="closeP">+</div>
-            <h2>Add New Product</h2>
-            <form action="/products" method="POST">
+            <h2>Add New Item</h2>
+            <form action="/products" method="POST" enctype="multipart/form-data" class="form">
 
                 <input class="field" type="text" id="category" name="category" placeholder="Category">
 
                 <input class="field" type="text" id="name" name="name" placeholder="Name">
 
                 <textarea class="field" name="description" id="description" cols="30" rows="10" placeholder="Description"></textarea>
-
-                <input type="submit" id="addProductSubmit" class="submitButton" value="Add Product">
+                <div>
+                    <input class="field" type="file" id="image">
+                </div> 
+                <button type="submit" class="submitButton">Add Item</button>
 
             </form>
         </div>
-    </div> -->
+    </div>
     
 <!-- </main> -->
 
@@ -113,21 +115,44 @@
     // const Pclose = document.getElementById('closeP');
     // const bgModalP = document.getElementById('bg-modalP');
     
+<<<<<<< HEAD
+
+    // Login Modal Control
+    navLbutton.addEventListener('click', () => {
+        bgModalL.style.display = 'flex';
+        event.preventDefault();
+    });
+=======
     
     // navLbutton.addEventListener('click', () => {
     //     bgModalL.style.display = 'flex';
     //     event.preventDefault();
     // });
+>>>>>>> submaster
     
     // Lclose.addEventListener('click', () => {
     //     bgModalL.style.display = 'none';
     // });
     
     // bgModalL.addEventListener('click', () => {
-        //     bgModalL.style.display = 'none';
-        //     event.preventDefault();
-        // });
+    //         bgModalL.style.display = 'none';
+    //         event.preventDefault();
+    //     });
     
+<<<<<<< HEAD
+    Rbutton.addEventListener('click', () => {
+        bgModalL.style.display = 'none';
+        bgModalR.style.display = 'flex';
+        event.preventDefault();
+    });
+
+     // Register Modal Control
+    Lbutton.addEventListener('click', () => {
+        bgModalR.style.display = 'none';
+        bgModalL.style.display = 'flex';
+        event.preventDefault();  
+    })
+=======
     // Rbutton.addEventListener('click', () => {
     //     bgModalL.style.display = 'none';
     //     bgModalR.style.display = 'flex';
@@ -139,16 +164,21 @@
     //     bgModalL.style.display = 'flex';
     //     event.preventDefault();  
     // })
+>>>>>>> submaster
     
     // Rclose.addEventListener('click', () => {
     //     bgModalR.style.display = 'none';
     // });
     
     // bgModalR.addEventListener('click', () => {
-        //     bgModalR.style.display = 'none';
-        //     event.preventDefault();
-        // });
+    //         bgModalR.style.display = 'none';
+    //         event.preventDefault();
+    //     });
         
+<<<<<<< HEAD
+    // Add Product Modal Control
+=======
+>>>>>>> submaster
     // navPbutton.addEventListener('click', () => {
     //     bgModalP.style.display = 'flex';
     //     event.preventDefault();
@@ -159,10 +189,23 @@
     // });
     
     // ModalP.addEventListener('click', () => {
-        //     bgModalP.style.display = 'none';
-        //     event.preventDefault();
-        // });
+    //         bgModalP.style.display = 'none';
+    //         event.preventDefault();
+    //     });
         
+<<<<<<< HEAD
+    // Esc Key Close Control
+    document.onkeydown = function(event) {
+        event = event || window.event;
+        if (event.keyCode == 27) {
+            bgModalL.style.display = 'none';
+            bgModalR.style.display = 'none';
+            // bgModalP.style.display = 'none';
+        }
+    };
+
+    </script>
+=======
     // document.onkeydown = function(event) {
     //     event = event || window.event;
     //     if (event.keyCode == 27) {
@@ -173,6 +216,7 @@
     // };
 
 </script>
+>>>>>>> submaster
 
 
 
