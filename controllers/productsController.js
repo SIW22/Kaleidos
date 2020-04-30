@@ -48,7 +48,7 @@ router.get('/', (req, res) => {
 
 /* Sort By Name */
 router.get('/name', (req, res) => {
-    db.Product.find().sort({name: 1}, (err, ProductsByName) => {
+    db.Product.find({}, {"product_name": 1, _id:0}).sort({}) => {
         if (err) {
             return res.send(err);
         }

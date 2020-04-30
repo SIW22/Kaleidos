@@ -3,18 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/css/home.css" rel="stylesheet">
+    <!-- <link href="/css/home.css" rel="stylesheet"> -->
+    <link href="/css/main.css" rel="stylesheet">
     <title>Trending || <%= title %> </title>
 </head>
 <body> 
     <div class="bg">
         <div class="title-slogan">
             <img src="/images/trending_logo.svg" alt="" height="150px">
-            <form action="/products">
+            <!-- <form action="/products">
                 <input class="arrow-button" type="image" img src="/images/arrow.png" alt="arrow-button"/>
-            </form>
+            </form> -->
+            <div class="access-account-links">
+                <a href="/products" class="navButton" id="navLbutton">Login</a>
+                <a href="/products" class="navButton" id="navRbutton">Register</a>
+            </div>
         </div>
     </div>
     <%- include('partials/_footer') %> 
 </body>
 </html>
+
+
+<!-- Login Modal -->
+<main>
+    <div id="bg-modalL">
+        <div id="modalL">
+            <div id="closeL">+</div>
+            <h2>Login to your account</h2>
+            
+            <form action="/auth/login" method="POST">
+
+                <input class="field" type="text" id="username" name="username" placeholder="Username">
+
+                <input class="field" type="text" id="password" name="password" placeholder="Password">
+
+                <input type="submit" class="submitButton" value="Submit">
+
+            </form>
+        </div>
+    </div>
+  
+<!-- Register Modal -->
+    <div id="bg-modalR">
+        <div id="modalR">
+            <div id="closeR">+</div>
+            <h2>Register your account</h2>
+            
+            <form action="/auth/register" method="POST">
+
+                <input class="field" type="text" id="fullName" name="fullName" placeholder="Full Name">
+
+                <input class="field" type="text" id="username" name="username" placeholder="Username">
+
+                <input class="field" type="text" id="email" name="email" placeholder="Email">
+
+                <input class="field" type="text" id="password" name="password" placeholder="Password">
+
+                <input class="field" type="text" id="password2" name="password2" placeholder="Confirm Password">
+
+                <input type="submit" class="submitButton" value="Submit">
+
+            </form>
+        </div>
+    </div>
+</main>
+
+
+
+
+<script>    
+
+    // login
+    const navLbutton = document.getElementById('navLbutton');
+    const Lclose = document.getElementById('closeL');
+    const bgModalL = document.getElementById('bg-modalL');
+
+    // register
+    const navRbutton = document.getElementById('navRbutton');
+    const Rclose = document.getElementById('closeR');
+    const bgModalR = document.getElementById('bg-modalR');
+    
+    
+    // OPEN MODAL
+    navLbutton.addEventListener('click', () => {
+        bgModalL.style.display = 'flex';
+        event.preventDefault();
+    });
+
+    navRbutton.addEventListener('click', () => {
+        bgModalR.style.display = 'flex';
+        event.preventDefault();
+    });
+
+    // EXIT MODAL
+    Lclose.addEventListener('click', () => {
+        bgModalL.style.display = 'none';
+    });
+    
+    Rclose.addEventListener('click', () => {
+        bgModalR.style.display = 'none';
+    });
+               
+    // escape function
+    document.onkeydown = function(event) {
+        event = event || window.event;
+        if (event.keyCode == 27) {
+            bgModalL.style.display = 'none';
+            bgModalR.style.display = 'none';
+        }
+    };
+
+</script>

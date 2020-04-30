@@ -31,7 +31,7 @@ router.post('/register', async (req,res) => {
 			password: hash,
 		}
 		// res.send({salt, hash});
-		const newUser = await db.User.create(userData);
+		await db.User.create(userData);
 		res.redirect('/auth/login');
 	} catch (err) {
 		res.send(err);
@@ -69,7 +69,10 @@ router.post('/login', async (req,res) => {
 		console.log('user confirmed', req.session);
 		req.session.currentUser = user._id;
 		console.log(req.session);
+
 		res.redirect('../products');
+		navLButton.style.display = 'none';
+		logoutBtn.style.display = 'flex';
 	} catch (err) {
 		res.send(err);
 	}

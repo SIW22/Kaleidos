@@ -6,16 +6,28 @@
             </a>
         </div>
         <div class="mainLinks">
-            <a href="" class="navButton" id="navLbutton">Login/Register</a>
             <a href="/products" class="navButton" id="productsLink">My Products</a>
+            <!-- <a href="" class="navButton" id="navLbutton">Login/Register</a> -->
+            <!-- new changes -->
+            <a href="/" class="navButton" id="logout-btn">Log out</a>
         </div>
     </div>
 </header>
 
+<!-- <script>
+	const navLButton = document.getElementById('navLButton');
+	const logoutBtn = document.getElementById('logout-btn');
+	navLButton.style.display = 'none';
+	logoutBtn.style.display = 'flex';
+	logoutBtn.addEventListener('click', () => {
+		navLButton.style.display = 'flex';
+	});
+</script> -->
+
 
 
 <!-- MODALS -->
-<main>
+<!-- <main>
     <div id="bg-modalL">
         <div id="modalL">
             <div id="closeL">+</div>
@@ -25,10 +37,10 @@
 
                 <input class="field" type="text" id="username" name="username" placeholder="Username">
 
-                <input class="field" type="text" id="password" name="password" placeholder="Password">
+                <input class="field" type="text" id="password" name="password" placeholder="Password"> -->
 
                 <!-- <a href="" class="submitButton">Submit</a> -->
-                <button class="mainButton" id="Rbutton">Register</button>
+                <!-- <button class="mainButton" id="Rbutton">Register</button>
 
                 <input type="submit" class="submitButton" value="Submit">
 
@@ -50,18 +62,18 @@
 
                 <input class="field" type="text" id="password" name="password" placeholder="Password">
 
-                <input class="field" type="text" id="password2" name="password2" placeholder="Confirm Password">
+                <input class="field" type="text" id="password2" name="password2" placeholder="Confirm Password"> -->
 
                 <!-- <a href="" class="submitButton">Submit</a> -->
 
-                <button class="mainButton" id="Lbutton">Login</button>
+                <!-- <button class="mainButton" id="Lbutton">Login</button>
 
                 <input type="submit" class="submitButton" value="Submit">
 
 
             </form>
         </div>
-    </div>
+    </div> -->
 
     <div id="bg-modalP">
         <div id="modalP">
@@ -83,42 +95,51 @@
         </div>
     </div>
     
-</main>
+<!-- </main> -->
 
 <%- include('../partials/_sort') %>
 
 
 <script>    
 
-    const navLbutton = document.getElementById('navLbutton');
-    const Lbutton = document.getElementById('Lbutton');
-    const Lclose = document.getElementById('closeL');
-    const bgModalL = document.getElementById('bg-modalL');
+    // const navLbutton = document.getElementById('navLbutton');
+    // const Lbutton = document.getElementById('Lbutton');
+    // const Lclose = document.getElementById('closeL');
+    // const bgModalL = document.getElementById('bg-modalL');
 
-    const Rbutton = document.getElementById('Rbutton');
-    const Rclose = document.getElementById('closeR');
-    const bgModalR = document.getElementById('bg-modalR');
+    // const Rbutton = document.getElementById('Rbutton');
+    // const Rclose = document.getElementById('closeR');
+    // const bgModalR = document.getElementById('bg-modalR');
 
     // const navPbutton = document.getElementById('navPbutton');
     // const Pclose = document.getElementById('closeP');
     // const bgModalP = document.getElementById('bg-modalP');
     
+<<<<<<< HEAD
 
     // Login Modal Control
     navLbutton.addEventListener('click', () => {
         bgModalL.style.display = 'flex';
         event.preventDefault();
     });
+=======
     
-    Lclose.addEventListener('click', () => {
-        bgModalL.style.display = 'none';
-    });
+    // navLbutton.addEventListener('click', () => {
+    //     bgModalL.style.display = 'flex';
+    //     event.preventDefault();
+    // });
+>>>>>>> submaster
+    
+    // Lclose.addEventListener('click', () => {
+    //     bgModalL.style.display = 'none';
+    // });
     
     // bgModalL.addEventListener('click', () => {
     //         bgModalL.style.display = 'none';
     //         event.preventDefault();
     //     });
     
+<<<<<<< HEAD
     Rbutton.addEventListener('click', () => {
         bgModalL.style.display = 'none';
         bgModalR.style.display = 'flex';
@@ -131,17 +152,33 @@
         bgModalL.style.display = 'flex';
         event.preventDefault();  
     })
+=======
+    // Rbutton.addEventListener('click', () => {
+    //     bgModalL.style.display = 'none';
+    //     bgModalR.style.display = 'flex';
+    //     event.preventDefault();
+    // });
     
-    Rclose.addEventListener('click', () => {
-        bgModalR.style.display = 'none';
-    });
+    // Lbutton.addEventListener('click', () => {
+    //     bgModalR.style.display = 'none';
+    //     bgModalL.style.display = 'flex';
+    //     event.preventDefault();  
+    // })
+>>>>>>> submaster
+    
+    // Rclose.addEventListener('click', () => {
+    //     bgModalR.style.display = 'none';
+    // });
     
     // bgModalR.addEventListener('click', () => {
     //         bgModalR.style.display = 'none';
     //         event.preventDefault();
     //     });
         
+<<<<<<< HEAD
     // Add Product Modal Control
+=======
+>>>>>>> submaster
     // navPbutton.addEventListener('click', () => {
     //     bgModalP.style.display = 'flex';
     //     event.preventDefault();
@@ -156,6 +193,7 @@
     //         event.preventDefault();
     //     });
         
+<<<<<<< HEAD
     // Esc Key Close Control
     document.onkeydown = function(event) {
         event = event || window.event;
@@ -167,6 +205,18 @@
     };
 
     </script>
+=======
+    // document.onkeydown = function(event) {
+    //     event = event || window.event;
+    //     if (event.keyCode == 27) {
+    //         bgModalL.style.display = 'none';
+    //         bgModalR.style.display = 'none';
+    //         // bgModalP.style.display = 'none';
+    //     }
+    // };
+
+</script>
+>>>>>>> submaster
 
 
 

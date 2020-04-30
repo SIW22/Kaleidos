@@ -1,0 +1,40 @@
+.product-description {
+    display: grid;
+    margin-left: 50%;
+    margin-right: 50%;
+    align-items: center;
+    justify-content: center;
+}
+
+.show-product-picture {
+    margin-top: 20px;
+}
+
+.edit-product {
+    margin-top: 5%;
+    margin-bottom: .5%;
+}
+
+.delete-product, .edit-product {
+    display: grid;
+}
+
+h2 {
+    letter-spacing: .75px;
+}
+
+.btn:hover {
+    background-color: lightgrey;
+    border-radius: 5px;
+}
+
+footer {
+    text-align: center;
+    padding: 5px;
+    bottom: 0;
+    margin-top: 6%;
+    width: 100%;
+    position: fixed;
+    background-color: #656571;
+    color: white;
+}
