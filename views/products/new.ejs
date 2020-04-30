@@ -12,35 +12,32 @@
     <%- include('../partials/_nav') %>
 
   <main>
-    <h1>Add New Product</h1>
+    <h2 class="title-text">Add New Item</h2>
 
     <form action="/products" method="POST" enctype="multipart/form-data" class="form">
 
       <div>
-        <label for="brand">Brand:</label><br />
-        <input type="text" id="brand" name="brand" maxlength="60" size="60"/>
+        <!-- <label for="brand">Brand:</label><br /> -->
+        <input class="field" type="text" id="category" name="category" maxlength="60" size="60" placeholder="Category"/>
       </div>
-      <br />
 
       <div>
-        <label for="itemName">Item Name:</label><br />
-        <input type="text" id="itemName" name="itemName" maxlength="60" size="60"/>
+        <!-- <label for="itemName">Item Name:</label><br /> -->
+        <input class="field" type="text" id="name" name="name" maxlength="60" size="60" placeholder="Name"/>
       </div>
-      <br />
 
       <div>
-        <label for="description">Description:</label><br />
-        <textarea name="description" id="description" cols="58" rows="10"></textarea>
+        <!-- <label for="description"></label><br /> -->
+        <textarea class="field" name="description" id="description" cols="58" rows="10" placeholder="Description"></textarea>
       </div>
-      <br />
 
       <div>
-        <label for="image">Image:</label><br />
-        <input type="file" name="image" />
+        <!-- <label for="image">Image:</label><br /> -->
+        <input class="field" type="file" name="image" />
       </div>
       <br />
 
-      <button type="submit">Add Product</button>
+      <button type="submit">Add Item</button>
       
     </form>
   </main>
