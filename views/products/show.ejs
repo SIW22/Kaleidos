@@ -3,27 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/css/show.css" rel="stylesheet">
+    <!-- <link href="/css/show.css" rel="stylesheet"> -->
     <link href="/css/main.css" rel="stylesheet">
     <title>Trending || <%= title %> </title>
 </head>
 
-<body>
+<body class="displayBody">
     <%- include('../partials/_nav') %>
 
     <div class="product-description">
-        <img class="show-product-picture" src="<%= product.image %>" alt="image" height="350px">
-        <h2><strong><%= product.brand %></strong> || <%= product.itemName %></h2>
-        <p><%= product.description %></p>
+        <img class="show-product-picture" src="<%= product.image %>" alt="image" >
+        <h2 class="item-name-text"><%= product.itemName %></h2>
+        <p class="item-description-text"><%= product.description %></p>
+        <div class="edit-delete-btns">
+            <a class="edit-product" href="/products/<%= product._id %>/edit">
+                <button class="btn edit-btn">Edit Product</button>
+            </a>
 
-        <a class="edit-product" href="/products/<%= product._id %>/edit">
-            <button class="btn edit-btn">Edit Product</button>
-        </a>
-
-        <form class="delete-product" action="/products/<%= product._id %>?_method=DELETE" method="POST">
-            <button class="btn delete-btn" type="submit">Delete Product</button>
-        </form>
-                        
+            <form class="delete-product" action="/products/<%= product._id %>?_method=DELETE" method="POST">
+                <button class="btn delete-btn" type="submit">Delete Product</button>
+            </form>
+        </div>
     </div>
  
 <%- include('../partials/_footer') %>
