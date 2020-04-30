@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link href="/css/edit.css" rel="stylesheet"> -->
+    <link href="/css/edit.css" rel="stylesheet">
     <link href="/css/main.css" rel="stylesheet">
     <title>Trending || <%= title %> </title>
 </head>
@@ -13,39 +13,32 @@
 
 
     <main>
-        <h2 class="title-text">Edit Item</h2>
+        <h1>Edit Item</h1>
 
         <form class="edit-product-form" action="/products/<%= product._id %>?_method=PUT" method="POST" enctype="multipart/form-data" class="form">
 
             <div>
                 <!-- <label for="category">Category:</label><br />  -->
-                <input class="field" type="text" id="category" name="category" value="<%= product.category %>" maxlength="60" size="60" placeholder="Category"/>
+                <input type="text" id="category" name="category" value="<%= product.category %>" maxlength="60" size="60" placeholder="Category"/>
             </div>
 
             <div>
                 <!-- <label for="name">Name:</label><br /> -->
-                <input class="field" type="text" id="name" name="name" value="<%= product.name %>" maxlength="60" size="60" placeholder="Item"/>
+                <input type="text" id="name" name="name" value="<%= product.name %>" maxlength="60" size="60" placeholder="Item"/>
             </div>
 
             <div>
                 <!-- <label for="description">Description:</label><br /> -->
-                <textarea class="field" name="description" id="description" cols="58" rows="10" placeholder="Description"><%= product.description %></textarea>
+                <textarea name="description" id="description" cols="58" rows="10" placeholder="Description"><%= product.description %></textarea>
             </div>
 
             <div>
-<<<<<<< HEAD
-                <!-- <label for="image">DON'T TOUCH</label><br /> -->
-                <input  class="field" type="file" name="image" />
-=======
                 <label for="image">DON'T TOUCH</label><br />
                 <input type="file" name="image" />
->>>>>>> submaster
             </div>
             <br />
 
-            <div class=button-container>
-                <input class="submitButton" id="submit-edit-btn" type="submit" value="Update Item">
-            </div>
+            <input type="submit" value="Update Item">
             
         </form>
     </main>

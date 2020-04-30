@@ -33,31 +33,6 @@ router.get('/', (req, res) => {
     });
 });
 
-/* Sort By Category */
-// router.get('/category', (req, res) => {
-//     db.Product.find().sort({name: 1}, (err, ProductsByName) => {
-//         if (err) {
-//             return res.send(err);
-//         }
-//         res.render('products/name', {
-//             products: ProductsByName,
-//             title: 'Items By Name',
-//         });
-//     });
-// });
-
-/* Sort By Name */
-router.get('/name', (req, res) => {
-    db.Product.find({}, {"product_name": 1, _id:0}).sort({}) => {
-        if (err) {
-            return res.send(err);
-        }
-        res.render('products/name', {
-            products: ProductsByName,
-            title: 'Items By Name',
-        });
-    });
-});
 
 /* -------------- GET Products New -------------- */
 router.get('/new', (req, res) => {
@@ -185,6 +160,8 @@ router.put('/:id/', multipartMiddleware, (req, res) => {
 })
 
 
+    
+
 /* ---------- DELETE Products Destroy ---------- */
 router.delete('/:id', (req, res) => {
     db.Product.findByIdAndDelete(req.params.id, (err, deletedProduct) => {
@@ -194,8 +171,6 @@ router.delete('/:id', (req, res) => {
         res.redirect('/products');
     });
 });
-
-
 
 
 
