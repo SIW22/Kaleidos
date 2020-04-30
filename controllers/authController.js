@@ -42,7 +42,7 @@ router.post('/register', async (req,res) => {
 router.get('/login', (req,res) => {
 	res.render('auth/login', {
 		title: 'Login',
-		// error: '',
+		error: '',
 	});
 });
 
@@ -69,15 +69,10 @@ router.post('/login', async (req,res) => {
 		console.log('user confirmed', req.session);
 		req.session.currentUser = user._id;
 		console.log(req.session);
-		const navLButton = document.getElementById('navLButton');
-		const logoutBtn = document.getElementById('logout-btn');
-		navLButton.style.display = 'none';
-		logoutBtn.style.display = 'flex';
-		logoutBtn.addEventListener('click', () => {
-			navLButton.style.display = 'flex';
-		});
 
 		res.redirect('../products');
+		navLButton.style.display = 'none';
+		logoutBtn.style.display = 'flex';
 	} catch (err) {
 		res.send(err);
 	}

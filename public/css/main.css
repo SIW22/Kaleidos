@@ -5,6 +5,24 @@ body {
 	/* background-color: rgba(0, 0, 0, 0.7); */
 }
 
+
+/* Home/Login Page */
+.bg {
+    margin-top: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.access-account-links {
+	top: 100px;
+	padding: 40px 0;
+	text-align: center;
+}
+
+
 /* Sort Nav */
 .accent-line {
 	width: 100%;
@@ -39,8 +57,8 @@ body {
 	color: lightgray;
 }
 
-/* Index CSS */
 
+/* Index CSS */
 .displayBody {
 	background-color: lightgray;
 }
@@ -101,6 +119,7 @@ body {
 	transform: translateY(0%)
 } 
 
+
 /* Login Modal */
 #bg-modalL {
 	width: 100%;
@@ -137,9 +156,6 @@ body {
 	z-index: 60;
 }
 
-#logout-btn {
-	display: none;
-}
 
 /* Register Modal */
 #bg-modalR {
@@ -178,7 +194,7 @@ body {
 }
 
 /* Products Modal */
-#bg-modalP {
+/* #bg-modalP {
 	width: 100%;
 	height: 100%;
 	background-color: rgba(0, 0, 0, 0.25);
@@ -211,7 +227,8 @@ body {
 	transform: rotate(45deg);
 	cursor: pointer;
 	z-index: 60;
-}
+} */
+
 
 /* Universal */
 .field {
@@ -281,6 +298,7 @@ footer {
 	width: 150px;
 } */
 
+/* buttons */
 #Rbutton {
 	background-color: #58AFDB;
 	color: white;
@@ -341,6 +359,7 @@ footer {
 	box-shadow: -2px 2px 2px rgba(100, 100, 100, 0.75);
 }
 
+/* nav bar */
 .siteBanner {
 	width: 100%;
 	height: 150px;
