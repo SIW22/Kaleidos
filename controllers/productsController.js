@@ -47,17 +47,17 @@ router.get('/', (req, res) => {
 // });
 
 /* Sort By Name */
-router.get('/name', (req, res) => {
-    db.Product.find({}, {"product_name": 1, _id:0}).sort({}) => {
-        if (err) {
-            return res.send(err);
-        }
-        res.render('products/name', {
-            products: ProductsByName,
-            title: 'Items By Name',
-        });
-    });
-});
+// router.get('/name', (req, res) => {
+//     db.Product.find({}, {"product_name": 1, _id:0}).sort({}) => {
+//         if (err) {
+//             return res.send(err);
+//         }
+//         res.render('products/name', {
+//             products: ProductsByName,
+//             title: 'Items By Name',
+//         });
+//     });
+// });
 
 /* -------------- GET Products New -------------- */
 router.get('/new', (req, res) => {
