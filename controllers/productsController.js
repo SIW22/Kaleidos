@@ -162,6 +162,8 @@ router.put('/:id/', multipartMiddleware, (req, res) => {
 })
 
 
+    
+
 /* ---------- DELETE Products Destroy ---------- */
 router.delete('/:id', (req, res) => {
     db.Product.findByIdAndDelete(req.params.id, (err, deletedProduct) => {
@@ -171,8 +173,6 @@ router.delete('/:id', (req, res) => {
         res.redirect('/products');
     });
 });
-
-
 
 
 
