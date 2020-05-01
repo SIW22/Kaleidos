@@ -3,7 +3,7 @@
 <body>
     <%- include('../partials/_nav') %>
 
-    <main>
+    <main class="content-wrap">
         <h2 class="title-text">Edit Item</h2>
 
         <form class="edit-product-form" action="/products/<%= product._id %>?_method=PUT" method="POST" enctype="multipart/form-data" class="form">
