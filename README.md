@@ -1,8 +1,7 @@
-# #TRENDING  
+# Kaleidos 
 
 
 ## Wireframes
----
 ![ERD](public/images/Kaleidos_Splash.png)
 ![ERD](public/images/Kaleidos_Login.png)
 ![ERD](public/images/Kaleidos_Register.png)
@@ -16,11 +15,11 @@
 
 ## User Stories
 
--Users are greeted with a splash page with branding id;
--Before loading the site, users may login or register a new account.
--Users can add images and descriptions of virtually anything.
--Once added, items added can be edited or deleted.
--1 user may have numerous collections of items, which can be sorted by category. 
+-   Users are greeted with a splash page with branding id;
+-   Before loading the site, users may login or register a new account.
+-   Users can add images and descriptions of virtually anything.
+-   Once added, items added can be edited or deleted.
+-   1 user may have numerous collections of items, which can be sorted by category. 
 
 ---
 
@@ -28,14 +27,15 @@ LOGO:
 - clicking on logo will lead back to home page
 
 
-HOME PAGE:
+SPLASH PAGE:
 - root route
 - logo and app name
 - slogan of our app
-- include navigation 
-    - BROWSE BY: all, category, type
-    - create account
+- create account
 
+INDEX PAGE:
+- include navigation 
+    - *browse by*: all, category, type
 
 USERS:
 - login/registration
@@ -45,13 +45,12 @@ USERS:
 
 
 ## DB Models and ERD
----
 ### ERD:
 ![ERD](public/images/models.jpg)
 
 
 ### MODELS:
-- clothing
+- collection / products
 - users
 
 ### SCHEMA ATTRIBUTES:
@@ -68,7 +67,6 @@ PRODUCT:
 - image: data
 
 ## Technologies Used
----
 - HTML
 - CSS
 - MongoDB
@@ -78,17 +76,18 @@ PRODUCT:
 - jQuery/Vanilla JS
 - Session
 - Mongo-Connect
-- Dropzone
 - Multiparty
 - Cloudinary
 - Dotenv
 
 ## BONUS/PLANNED FEATURES:
-- better CSS
+- add sort by category function
+- login / registration options
+- display and add images
 
-### CRUD
-- full functionality for all users.
+## CRUD
+- full functionality for all users
 - Create new items
 - View created items
 - Edit items
-- delete items 
+- Delete items 
