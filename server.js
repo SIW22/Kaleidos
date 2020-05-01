@@ -12,7 +12,7 @@ const methodOverride = require('method-override');
 require('dotenv').config();
 
 
-
+// start port
 const port = process.env.PORT || 4000;
 const app = express();
 
@@ -20,16 +20,16 @@ console.log('The value of test = ', process.env.NEW_TEST);
 
 /* ---------------- CONTROLLERS ---------------- */
 const productsController = require('./controllers/productsController');
-
 const authController = require('./controllers/authController');
 
 
 /* -------------- SET VIEW ENGINE -------------- */
 app.set('view engine', 'ejs');
 
-// allows us to use CSS
+// Static
 app.use(express.static('views/partials'))
 app.use(express.static('public'));
+
 
 /* ---------------- MIDDLEWARE ---------------- */
 // Express Session
@@ -52,7 +52,6 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
 
-
 /* ---------------- ROUTES ---------------- */
 // GET Root Route
 app.get('/', (req, res) => {
@@ -66,7 +65,6 @@ app.use('/products', productsController);
 
 // Auth Route
 app.use('/auth', authController);
-
 
 
 /* ---------------- EVENT LISTENER ---------------- */

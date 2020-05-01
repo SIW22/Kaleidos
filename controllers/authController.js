@@ -42,6 +42,7 @@ router.post('/register', async (req,res) => {
 	}
 });
 
+
 /* ------------- GET Login New ------------- */
 router.get('/login', (req,res) => {
 	res.render('auth/login', {
@@ -49,7 +50,6 @@ router.get('/login', (req,res) => {
 		error: '',
 	});
 });
-
 
 
 /* -------- POST Login Create (Session) -------- */
