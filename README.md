@@ -3,13 +3,13 @@
 
 ## Wireframes
 ---
-![ERD](public/images/Kaleidos_Splash.jpg)
-![ERD](public/images/Kaleidos_Login.jpg)
-![ERD](public/images/Kaleidos_Index.jpg)
-![ERD](public/images/Kaleidos_New.jpg)
-![ERD](public/images/Kaleidos_Show.jpg)
-![ERD](public/images/Kaleidos_Edit.jpg)
-![ERD](public/images/Kaleidos_Delete.jpg)
+![ERD](public/images/Kaleidos_Splash.png)
+![ERD](public/images/Kaleidos_Login.png)
+![ERD](public/images/Kaleidos_Index.png)
+![ERD](public/images/Kaleidos_New.png)
+![ERD](public/images/Kaleidos_Show.png)
+![ERD](public/images/Kaleidos_Edit.png)
+![ERD](public/images/Kaleidos_Delete.png)
 
 ## User Stories
 
