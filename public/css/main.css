@@ -402,7 +402,7 @@ footer {
 	color: #656471;
 }
 
-/* show page */
+/* show and edit pages */
 .product-description {
     display: grid;
     /* margin-left: 50%;
@@ -484,5 +484,19 @@ footer {
 	text-align: center;
 }
 
-/* edit page */
+.image-upload-div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0;
+}
 
+.button-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#submit-edit-btn {
+	width: 150px;
+}

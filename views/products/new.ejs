@@ -17,28 +17,25 @@
     <form action="/products" method="POST" enctype="multipart/form-data" class="form">
 
       <div>
-        <!-- <label for="brand">Brand:</label><br /> -->
         <input class="field" type="text" id="category" name="category" maxlength="60" size="60" placeholder="Category"/>
       </div>
 
       <div>
-        <!-- <label for="itemName">Item Name:</label><br /> -->
         <input class="field" type="text" id="name" name="name" maxlength="60" size="60" placeholder="Name"/>
       </div>
 
       <div>
-        <!-- <label for="description"></label><br /> -->
         <textarea class="field" name="description" id="description" cols="58" rows="10" placeholder="Description"></textarea>
       </div>
 
       <div>
-        <!-- <label for="image">Image:</label><br /> -->
         <input class="field" type="file" name="image" />
       </div>
-      <br />
 
-      <button type="submit">Add Item</button>
-      
+      <div class="button-container">
+        <input class="submitButton" id="submit-add-btn" type="submit" value="Add Item"></input>
+      </div>
+
     </form>
   </main>
 
