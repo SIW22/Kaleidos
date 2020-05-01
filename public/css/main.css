@@ -255,6 +255,10 @@ body {
 	color: rgba(255, 255, 255, 0.5);
 }
 
+.text-field {
+	height: auto;
+}
+
 .submitButton {
 	background-color: #58AFDB;
 	color: white;
@@ -478,6 +482,7 @@ footer {
 
 .title-text {
 	text-align: center;
+	color: #646470;
 }
 
 .image-upload-div {
