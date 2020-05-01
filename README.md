@@ -5,11 +5,14 @@
 ---
 ![ERD](public/images/Kaleidos_Splash.png)
 ![ERD](public/images/Kaleidos_Login.png)
+![ERD](public/images/Kaleidos_Register.png)
 ![ERD](public/images/Kaleidos_Index.png)
+![ERD](public/images/Kaleidos_Overlay.png)
+![ERD](public/images/Kaleidos_Category.png)
 ![ERD](public/images/Kaleidos_New.png)
 ![ERD](public/images/Kaleidos_Show.png)
 ![ERD](public/images/Kaleidos_Edit.png)
-![ERD](public/images/Kaleidos_Delete.png)
+
 
 ## User Stories
 
@@ -84,4 +87,8 @@ PRODUCT:
 - better CSS
 
 ### CRUD
-- full CRUD functionality for all users. 
+- full functionality for all users.
+- Create new items
+- View created items
+- Edit items
+- delete items 
