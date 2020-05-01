@@ -1,15 +1,19 @@
 <header>
-    <nav>
-        <ul>
-            <li>
-                <a href="/">Home</a>
-            </li>
-            <li>
-                <a href="/products">My Products</a>
-            </li>
-            <li>
-                <a href="/products/new">Add Product</a>
-            </li>
-        </ul>
-    </nav>
+    <div class="site-banner">
+        <div class="banner-image">
+            <a href="/products">
+                <img src="/images/kaleidos_banner_logo.svg" alt="kaleidos logo" height="75px" id="kaleidos-logo">
+            </a>
+        </div>
+        <div class="main-links">
+            <a href="/products" class="nav-button" id="products-link">My Products</a>
+            <a href="/" class="nav-button" id="logout-btn">Log out</a>
+        </div>
+    </div>
 </header>
+
+<%- include('../partials/_sort') %>
+
+
+
+

@@ -1,10 +1,11 @@
 const mongoose = require('mongoose');
 
 const ProductSchema = new mongoose.Schema({
-    brand: {
+    category: {
         type: String,
+        required: true,
     },
-    itemType: {
+    name: {
         type: String,
         required: true,
     },
@@ -13,7 +14,7 @@ const ProductSchema = new mongoose.Schema({
     },
     image: {
         type: String,
-    },
+    }
 }, {timestamps: true});
 
 

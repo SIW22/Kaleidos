@@ -1,26 +1,43 @@
 const express = require('express');
+const multipart = require('connect-multiparty');
+const multipartMiddleware = multipart();
+const cloudinary = require('cloudinary');
 const session = require('express-session');
-const methodOverride = require('method-override');
+const MongoStore = require('connect-mongo')(session);
 const bodyParser = require('body-parser');
+const methodOverride = require('method-override');
 
+/* ---------------- CONFIGS ---------------- */
+// dotenv
+require('dotenv').config();
+
+
+// start port
 const port = process.env.PORT || 4000;
 const app = express();
 
+console.log('The value of test = ', process.env.NEW_TEST);
 
 /* ---------------- CONTROLLERS ---------------- */
 const productsController = require('./controllers/productsController');
-
 const authController = require('./controllers/authController');
 
 
 /* -------------- SET VIEW ENGINE -------------- */
 app.set('view engine', 'ejs');
 
+// Static
+app.use(express.static('views/partials'))
+app.use(express.static('public'));
+
 
 /* ---------------- MIDDLEWARE ---------------- */
 // Express Session
 app.use(session({
-    secret: 'bsrhgbksjrbfkjbrd',
+    store: new MongoStore({
+        url: process.env.MONGODB_URI || 'mongodb://localhost:27017/trending',
+    }),
+    secret: process.env.SESSION_SECRET, // how we verify we created this cookie
     resave: false,
     saveUninitialized: false,
 }));
@@ -35,12 +52,11 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
 
-
 /* ---------------- ROUTES ---------------- */
 // GET Root Route
 app.get('/', (req, res) => {
     res.render('index', {
-        title: 'Home'
+        title: 'Home' 
     });
 });
 
@@ -49,7 +65,6 @@ app.use('/products', productsController);
 
 // Auth Route
 app.use('/auth', authController);
-
 
 
 /* ---------------- EVENT LISTENER ---------------- */

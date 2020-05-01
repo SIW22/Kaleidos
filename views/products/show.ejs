@@ -1,0 +1,21 @@
+<%- include('../partials/_head') %>
+
+<body class="display-body wrapper">
+    <%- include('../partials/_nav') %>
+
+    <div class="product-description content-wrap">
+        <img class="show-product-picture" src="<%= product.image %>" alt="image" >
+        <h2 class="item-name-text"><%= product.name %></h2>
+        <p class="item-description-text"><%= product.description %></p>
+        <div class="edit-delete-btns">
+            <a class="edit-product" href="/products/<%= product._id %>/edit">
+                <button class="btn edit-btn">Edit Item</button>
+            </a>
+
+            <form class="delete-product" action="/products/<%= product._id %>?_method=DELETE" method="POST">
+                <button class="btn delete-btn" type="submit">Delete Item</button>
+            </form>
+        </div>
+    </div>
+ 
+<%- include('../partials/_footer') %>

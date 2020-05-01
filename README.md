@@ -1,82 +1,56 @@
-# #TRENDING  
+# Kaleidos 
 
 
 ## Wireframes
----
-![ERD](images/coversheet.jpg)
-![ERD](images/login.jpg)
-![ERD](images/register.jpg)
-![ERD](images/browseall.jpg)
-![ERD](images/bybrand.jpg)
-![ERD](images/bystyle.jpg)
-![ERD](images/byprice.jpg)
-![ERD](images/cart.jpg)
-![ERD](images/purchase.jpg)
+![ERD](public/images/Kaleidos_Splash.png)
+![ERD](public/images/Kaleidos_Login.png)
+![ERD](public/images/Kaleidos_Register.png)
+![ERD](public/images/Kaleidos_Index.png)
+![ERD](public/images/Kaleidos_Overlay.png)
+![ERD](public/images/Kaleidos_Category.png)
+![ERD](public/images/Kaleidos_New.png)
+![ERD](public/images/Kaleidos_Show.png)
+![ERD](public/images/Kaleidos_Edit.png)
+
 
 ## User Stories
 
--Users are greeted with a splash page with branding id;
--Upon loading the site, users may login or register a new account.
--Items available can be sorted by various prompts: browseall, by   brand, etc.
--Items selected are added to a cart, which can be viewed with each item's properties listed. 
--Dollar amounts are added together and a total is presented. 
--User can choose to keep shopping and return to the store.
--User clicks purchase and a congrats on your purchase screen is displayed. 
+-   Users are greeted with a splash page with branding id;
+-   Before loading the site, users may login or register a new account.
+-   Users can add images and descriptions of virtually anything.
+-   Once added, items added can be edited or deleted.
+-   1 user may have numerous collections of items, which can be sorted by category. 
 
 ---
-GENERAL:
-- wireframe home, cart, favorites, shopping page, payment page
-- set up variables, routes, server listener, exports, middleware, database
-- set up partial (navigation bar)
-- create view template for all
-- write a server route for all
-
 
 LOGO:
 - clicking on logo will lead back to home page
 
 
-HOME PAGE:
+SPLASH PAGE:
 - root route
 - logo and app name
 - slogan of our app
+- create account
+
+INDEX PAGE:
 - include navigation 
-    - SHOP BY: all, brand, type, item
-    - create account
-
-
-SHOPPING PAGE:
-- include navigation bar
-
-
-CART:
-- edit/delete options
-- continue shopping route (leads back to shopping page)
-- continue to checkout option
-
-
-CHECKOUT/PAYMENT:
-- "congrats on your purchase"
-- no payment info needed!
-
-
-FAVORITES:
-- similar to cart - a collection of favotited
-
+    - *browse by*: all, category, type
 
 USERS:
 - login/registration
+- session tied to login
+- logout
 
 
 
 ## DB Models and ERD
----
 ### ERD:
-![ERD](images/models.jpg)
+![ERD](public/images/models.jpg)
 
 
 ### MODELS:
-- clothing
+- collection / products
 - users
 
 ### SCHEMA ATTRIBUTES:
@@ -86,23 +60,13 @@ USER:
 - email: String,
 - password: String
 
-BRAND:
-- item: collection
-
-GUEST CONSUMER:
-- cart: collection,
-- favorites: collection,
-
-
 PRODUCT:
-- brand: String,
-- item type: String,
-- price: Integer,
-- size: String,
-- description: String
+- Category: String,
+- Item name: String,
+- description: String,
+- image: data
 
 ## Technologies Used
----
 - HTML
 - CSS
 - MongoDB
@@ -110,11 +74,20 @@ PRODUCT:
 - JavaScript
 - DOM Manipulation
 - jQuery/Vanilla JS
+- Session
+- Mongo-Connect
+- Multiparty
+- Cloudinary
+- Dotenv
 
 ## BONUS/PLANNED FEATURES:
-- better CSS
-### CRUD
-- hardwire from backend 
-    - not available for users
-    - only available for admin (specific admin email to trigger login to create/edit route)
+- add sort by category function
+- login / registration options
+- display and add images
 
+## CRUD
+- full functionality for all users
+- Create new items
+- View created items
+- Edit items
+- Delete items 

@@ -1,0 +1,30 @@
+<%- include('../partials/_head') %>
+
+<body class="wrapper">
+    <%- include('../partials/_nav') %>
+
+    <main class="content-wrap">
+        <h2 class="title-text">Edit Item</h2>
+
+        <form class="edit-product-form" action="/products/<%= product._id %>?_method=PUT" method="POST" enctype="multipart/form-data" class="form">
+
+            <div>
+                <input class="field" type="text" id="category" name="category" value="<%= product.category %>" maxlength="60" size="60" placeholder="Category"/>
+            </div>
+
+            <div>
+                <input class="field" type="text" id="name" name="name" value="<%= product.name %>" maxlength="60" size="60" placeholder="Name"/>
+            </div>
+
+            <div>
+                <textarea class="field text-field" name="description" id="description" cols="58" rows="5" placeholder="Description"><%= product.description %></textarea>
+            </div>
+
+            <div class="button-container">
+                <input class="submit-button" id="submit-edit-btn" type="submit" value="Update Item">
+            </div>
+            
+        </form>
+    </main>
+
+<%- include('../partials/_footer') %>

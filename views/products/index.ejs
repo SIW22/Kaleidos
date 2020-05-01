@@ -1,0 +1,28 @@
+<%- include('../partials/_head') %>
+
+<body class="wrapper">
+  <%- include('../partials/_nav') %>
+
+  <main class="display-body content-wrap">
+
+    <div class="background">
+      <div class="image-field">
+        <% products.forEach(product => { %>
+          <a href="/products/<%= product._id %>" class="image-block">
+            <img class="image-proportion" src="<%= product.image %>" alt="image" >
+            <div class="image-overlay">
+              <p class="overlay-text"><%= product.name %><span class="click-for-description">click for description</span></p>
+            </div>
+          </a>
+          <% }); %>
+          <div class="add-div">
+            <a href="/products/new" class="image-block">
+              <img class="image-proportion"src="/images/add-button.png" alt="add-button">
+            </a>
+          </div>
+      </div>  
+    </div>
+
+  </main>
+
+<%- include('../partials/_footer') %>
