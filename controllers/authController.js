@@ -21,7 +21,10 @@ router.post('/register', async (req,res) => {
 	try {
 		const user = await db.User.findOne({username: req.body.username});
 		if (user) {
-			return res.send('<h1>Account already exists, please login</h1>');
+			return res.render('auth/login', {
+				title: 'Register',
+				error: '*** Account already exists, please login ***',
+			});
 		}
 		const salt = bcrypt.genSaltSync(10);
 		const hash = bcrypt.hashSync(req.body.password, salt);
@@ -30,9 +33,10 @@ router.post('/register', async (req,res) => {
 			email: req.body.email,
 			password: hash,
 		}
-		// res.send({salt, hash});
-		await db.User.create(userData);
-		res.redirect('/auth/login');
+		const newUser = await db.User.create(userData);
+		req.session.currentUser = newUser._id;
+		console.log(req.session);
+		res.redirect('../products');
 	} catch (err) {
 		res.send(err);
 	}
@@ -56,23 +60,20 @@ router.post('/login', async (req,res) => {
 		if (!user) {
 			return res.render('auth/login', {
 				title: 'Login',
-				error: 'Invalid Credentials',
+				error: '*** Invalid Credentials ***',
 			});
 		}
 		const passwordsMatch = bcrypt.compareSync(req.body.password, user.password);
 		if (!passwordsMatch) {
 			return res.render('auth/login', {
 				title: 'Login',
-				error: 'Invalid Credentials',
+				error: '*** Invalid Credentials ***',
 			});
 		}
 		console.log('user confirmed', req.session);
 		req.session.currentUser = user._id;
 		console.log(req.session);
-
 		res.redirect('../products');
-		navLButton.style.display = 'none';
-		logoutBtn.style.display = 'flex';
 	} catch (err) {
 		res.send(err);
 	}

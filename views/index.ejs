@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link href="/css/home.css" rel="stylesheet"> -->
     <link href="/css/main.css" rel="stylesheet">
     <title>Trending || <%= title %> </title>
 </head>
@@ -11,9 +10,6 @@
     <div class="bg">
         <div class="title-slogan">
             <img src="/images/trending_logo.svg" alt="" height="150px">
-            <!-- <form action="/products">
-                <input class="arrow-button" type="image" img src="/images/arrow.png" alt="arrow-button"/>
-            </form> -->
             <div class="access-account-links">
                 <a href="/products" class="navButton" id="navLbutton">Login</a>
                 <a href="/products" class="navButton" id="navRbutton">Register</a>
@@ -21,8 +17,7 @@
         </div>
     </div>
     <%- include('partials/_footer') %> 
-</body>
-</html>
+
 
 
 <!-- Login Modal -->
@@ -38,11 +33,14 @@
 
                 <input class="field" type="text" id="password" name="password" placeholder="Password">
 
-                <input type="submit" class="submitButton" value="Submit">
+                <input type="submit" class="submitButton" value="Login">
+
+                <h5 class="acc-instruction">New to Trending? <a id="Rbutton" href="/auth/register">Create an account</a></h5>
 
             </form>
         </div>
     </div>
+
   
 <!-- Register Modal -->
     <div id="bg-modalR">
@@ -62,7 +60,9 @@
 
                 <input class="field" type="text" id="password2" name="password2" placeholder="Confirm Password">
 
-                <input type="submit" class="submitButton" value="Submit">
+                <input type="submit" class="submitButton" value="Sign Up">
+
+                <h5 class="acc-instruction">Have an account already? <a id="Lbutton" href="/auth/login">Login</a></h5>
 
             </form>
         </div>
@@ -76,11 +76,13 @@
 
     // login
     const navLbutton = document.getElementById('navLbutton');
+    const Lbutton = document.getElementById('Lbutton');
     const Lclose = document.getElementById('closeL');
     const bgModalL = document.getElementById('bg-modalL');
 
     // register
     const navRbutton = document.getElementById('navRbutton');
+    const Rbutton = document.getElementById('Rbutton');
     const Rclose = document.getElementById('closeR');
     const bgModalR = document.getElementById('bg-modalR');
     
@@ -104,6 +106,19 @@
     Rclose.addEventListener('click', () => {
         bgModalR.style.display = 'none';
     });
+
+    // transition to other modal
+    Rbutton.addEventListener('click', () => {
+        bgModalL.style.display = 'none';
+        bgModalR.style.display = 'flex';
+        event.preventDefault();
+    });
+    
+    Lbutton.addEventListener('click', () => {
+        bgModalR.style.display = 'none';
+        bgModalL.style.display = 'flex';
+        event.preventDefault();  
+    })
                
     // escape function
     document.onkeydown = function(event) {
