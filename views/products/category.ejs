@@ -1,0 +1,26 @@
+<%- include('../partials/_head') %>
+  <main class="displayBody">
+
+    <div class="background">
+      <div class="imageField">
+        <% products.forEach(product => { %>
+          <a href="/products/<%= product.category %>" class="imageBlock">
+            <img class="image-proportion" src="<%= product.image %>" alt="image" >
+            <div class="imageOverlay">
+              <p class="overlay-text"><%= product.name %><span class="click-for-description">click for description</span></p>
+            </div>
+          </a>
+		  <% }); %>
+		  
+          <div class="add-div">
+            <a href="/products/new" class="imageBlock">
+              <img class="image-proportion" src="/images/add-button.png" alt="add-button">
+            </a>
+		  </div>
+		  
+      </div>  
+    </div>
+
+  </main>
+
+<%- include('../partials/_footer') %>

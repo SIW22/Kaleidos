@@ -21,16 +21,18 @@ cloudinary.config({
 
 
 /* ------------ GET Products Index ------------ */
-router.get('/', (req, res) => {
+router.get('/', async (req, res) => {
     db.Product.find({}, (err, allProducts) => {
+        
         if (err) {
             return res.send(err);
         }
-        res.render('products/index', {
+        
+        return res.render('products/index', {
             products: allProducts,
             title: 'Products',
         });
-    });
+    }).sort({[req.query.sort]: req.query.order });
 });
 
 
