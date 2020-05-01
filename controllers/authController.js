@@ -56,19 +56,19 @@ router.post('/login', async (req,res) => {
 		const user = await db.User.findOne({username: req.body.username});
 		console.log(user);
 		if (!user) {
-			res.redirect('../products');
-			// return res.render('auth/login', {
-			// 	title: 'Login',
-			// 	error: 'Invalid Credentials',
-			// });
+			// res.redirect('../products');
+			return res.render('auth/login', {
+				title: 'Login',
+				error: 'Invalid Credentials',
+			});
 		}
 		const passwordsMatch = bcrypt.compareSync(req.body.password, user.password);
 		if (!passwordsMatch) {
-			res.redirect('../');
-			// return res.render('auth/login', {
-			// 	title: 'Login',
-			// 	error: 'Invalid Credentials',
-			// });
+			// res.redirect('../');
+			return res.render('auth/login', {
+				title: 'Login',
+				error: 'Invalid Credentials',
+			});
 		}
 		console.log('user confirmed', req.session);
 		req.session.currentUser = user._id;
