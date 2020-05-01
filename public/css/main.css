@@ -1,6 +1,9 @@
 body {
 	margin: 0;
 	padding: 0;
+}
+
+.wrapper {
 	position: relative;
 	min-height: 100vh;
 }
@@ -329,6 +332,7 @@ footer {
 	color: #656571;
 	margin: 0;
 	display: flex;
+	max-width: 600px;
 }
 
 .delete-btn, .edit-btn {

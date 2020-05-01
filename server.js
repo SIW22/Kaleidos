@@ -56,7 +56,7 @@ app.use(bodyParser.json());
 // GET Root Route
 app.get('/', (req, res) => {
     res.render('index', {
-        title: 'Home'
+        title: 'Home' 
     });
 });
 
