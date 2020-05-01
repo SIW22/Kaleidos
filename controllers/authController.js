@@ -31,8 +31,10 @@ router.post('/register', async (req,res) => {
 			password: hash,
 		}
 		// res.send({salt, hash});
-		await db.User.create(userData);
-		res.redirect('/auth/login');
+		const newUser = await db.User.create(userData);
+		req.session.currentUser = newUser._id;
+		console.log(req.session);
+		res.redirect('../products');
 	} catch (err) {
 		res.send(err);
 	}
@@ -54,25 +56,24 @@ router.post('/login', async (req,res) => {
 		const user = await db.User.findOne({username: req.body.username});
 		console.log(user);
 		if (!user) {
-			return res.render('auth/login', {
-				title: 'Login',
-				error: 'Invalid Credentials',
-			});
+			res.redirect('../products');
+			// return res.render('auth/login', {
+			// 	title: 'Login',
+			// 	error: 'Invalid Credentials',
+			// });
 		}
 		const passwordsMatch = bcrypt.compareSync(req.body.password, user.password);
 		if (!passwordsMatch) {
-			return res.render('auth/login', {
-				title: 'Login',
-				error: 'Invalid Credentials',
-			});
+			res.redirect('../');
+			// return res.render('auth/login', {
+			// 	title: 'Login',
+			// 	error: 'Invalid Credentials',
+			// });
 		}
 		console.log('user confirmed', req.session);
 		req.session.currentUser = user._id;
 		console.log(req.session);
-
-		res.redirect('../products');
-		navLButton.style.display = 'none';
-		logoutBtn.style.display = 'flex';
+		res.redirect('../');
 	} catch (err) {
 		res.send(err);
 	}

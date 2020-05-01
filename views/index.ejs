@@ -20,9 +20,8 @@
             </div>
         </div>
     </div>
-    <%- include('partials/_footer') %> 
-</body>
-</html>
+<%- include('partials/_footer') %> 
+
 
 
 <!-- Login Modal -->
@@ -39,6 +38,8 @@
                 <input class="field" type="text" id="password" name="password" placeholder="Password">
 
                 <input type="submit" class="submitButton" value="Submit">
+
+                <h5 class="acc-instruction">New to Trending? <a id="Rbutton" href="/auth/register">Create an account</a></h5>
 
             </form>
         </div>
@@ -64,6 +65,9 @@
 
                 <input type="submit" class="submitButton" value="Submit">
 
+                <h5 class="acc-instruction">Have an account already? <a id="Lbutton" href="/auth/login">Login</a></h5>
+
+                <!-- <button class="mainButton" id="Lbutton">Login</button> -->
             </form>
         </div>
     </div>
@@ -76,11 +80,13 @@
 
     // login
     const navLbutton = document.getElementById('navLbutton');
+    const Lbutton = document.getElementById('Lbutton');
     const Lclose = document.getElementById('closeL');
     const bgModalL = document.getElementById('bg-modalL');
 
     // register
     const navRbutton = document.getElementById('navRbutton');
+    const Rbutton = document.getElementById('Rbutton');
     const Rclose = document.getElementById('closeR');
     const bgModalR = document.getElementById('bg-modalR');
     
@@ -104,6 +110,19 @@
     Rclose.addEventListener('click', () => {
         bgModalR.style.display = 'none';
     });
+
+    // transition to other modal
+    Rbutton.addEventListener('click', () => {
+        bgModalL.style.display = 'none';
+        bgModalR.style.display = 'flex';
+        event.preventDefault();
+    });
+    
+    Lbutton.addEventListener('click', () => {
+        bgModalR.style.display = 'none';
+        bgModalL.style.display = 'flex';
+        event.preventDefault();  
+    })
                
     // escape function
     document.onkeydown = function(event) {
