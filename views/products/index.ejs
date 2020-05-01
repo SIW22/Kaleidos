@@ -3,20 +3,20 @@
 <body>
   <%- include('../partials/_nav') %>
 
-  <main class="displayBody">
+  <main class="display-body">
 
     <div class="background">
-      <div class="imageField">
+      <div class="image-field">
         <% products.forEach(product => { %>
-          <a href="/products/<%= product._id %>" class="imageBlock">
+          <a href="/products/<%= product._id %>" class="image-block">
             <img class="image-proportion" src="<%= product.image %>" alt="image" >
-            <div class="imageOverlay">
+            <div class="image-overlay">
               <p class="overlay-text"><%= product.name %><span class="click-for-description">click for description</span></p>
             </div>
           </a>
           <% }); %>
           <div class="add-div">
-            <a href="/products/new" class="imageBlock">
+            <a href="/products/new" class="image-block">
               <img class="image-proportion"src="/images/add-button.png" alt="add-button">
             </a>
           </div>

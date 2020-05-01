@@ -4,8 +4,8 @@
         <div class="title-slogan">
             <img src="/images/trending_logo.svg" alt="" height="150px">
             <div class="access-account-links">
-                <a href="/products" class="navButton" id="navLbutton">Login</a>
-                <a href="/products" class="navButton" id="navRbutton">Register</a>
+                <a href="/products" class="nav-button" id="nav-l-button">Login</a>
+                <a href="/products" class="nav-button" id="nav-r-button">Register</a>
             </div>
         </div>
     </div>
@@ -14,9 +14,9 @@
 
 <main>
 <!-- Login Modal -->
-    <div id="bg-modalL">
-        <div id="modalL">
-            <div id="closeL">+</div>
+    <div id="bg-modal-l">
+        <div id="modal-l">
+            <div id="close-l">+</div>
             <h2>Login to your account</h2>
             
             <form action="/auth/login" method="POST">
@@ -24,18 +24,18 @@
 
                 <input class="field" type="text" id="password" name="password" placeholder="Password">
 
-                <input type="submit" class="submitButton" value="Login">
+                <input type="submit" class="submit-button" value="Login">
 
-                <h5 class="acc-instruction">New to Trending? <a id="Rbutton" href="/auth/register">Create an account</a></h5>
+                <h5 class="acc-instruction">New to Trending? <a id="r-button" href="/auth/register">Create an account</a></h5>
             </form>
         </div>
     </div>
 
   
 <!-- Register Modal -->
-    <div id="bg-modalR">
-        <div id="modalR">
-            <div id="closeR">+</div>
+    <div id="bg-modal-r">
+        <div id="modal-r">
+            <div id="close-r">+</div>
             <h2>Register your account</h2>
             
             <form action="/auth/register" method="POST">
@@ -49,9 +49,9 @@
 
                 <input class="field" type="text" id="password2" name="password2" placeholder="Confirm Password">
 
-                <input type="submit" class="submitButton" value="Sign Up">
+                <input type="submit" class="submit-button" value="Sign Up">
                 
-                <h5 class="acc-instruction">Have an account already? <a id="Lbutton" href="/auth/login">Login</a></h5>
+                <h5 class="acc-instruction">Have an account already? <a id="l-button" href="/auth/login">Login</a></h5>
             </form>
         </div>
     </div>
@@ -62,16 +62,16 @@
 <script>    
 
     // login
-    const navLbutton = document.getElementById('navLbutton');
-    const Lbutton = document.getElementById('Lbutton');
-    const Lclose = document.getElementById('closeL');
-    const bgModalL = document.getElementById('bg-modalL');
+    const navLbutton = document.getElementById('nav-l-button');
+    const Lbutton = document.getElementById('l-button');
+    const Lclose = document.getElementById('close-l');
+    const bgModalL = document.getElementById('bg-modal-l');
 
     // register
-    const navRbutton = document.getElementById('navRbutton');
-    const Rbutton = document.getElementById('Rbutton');
-    const Rclose = document.getElementById('closeR');
-    const bgModalR = document.getElementById('bg-modalR');
+    const navRbutton = document.getElementById('nav-r-button');
+    const Rbutton = document.getElementById('r-button');
+    const Rclose = document.getElementById('close-r');
+    const bgModalR = document.getElementById('bg-modal-r');
     
     
     // OPEN MODAL

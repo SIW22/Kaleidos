@@ -57,11 +57,11 @@ body {
 
 
 /* Index CSS */
-.displayBody {
+.display-body {
 	background-color: lightgray;
 }
 
-.imageField {
+.image-field {
 	height: 100%;
 	width: 100%;
 	display: flex;
@@ -76,7 +76,7 @@ body {
 	object-fit: cover;
 }
 
-.imageBlock {
+.image-block {
 	height: 300px;
 	width: 400px;
 	background-color: white;
@@ -91,7 +91,7 @@ body {
 	border: 2px solid #58AFDB;
 }
 
-.imageOverlay {
+.image-overlay {
 	position: absolute;
 	transform: translateY(100%);
 	width: 400px;
@@ -113,7 +113,7 @@ body {
 	float: right;
 }
 
-.imageBlock:hover .imageOverlay {
+.image-block:hover .image-overlay {
 	transform: translateY(0%)
 } 
 
@@ -123,7 +123,7 @@ body {
 
 
 /* Login Modal */
-#bg-modalL {
+#bg-modal-l {
 	width: 100%;
 	height: 100%;
 	background-color: rgba(0, 0, 0, 0.25);
@@ -136,7 +136,7 @@ body {
 	z-index: 50;
 }
 	
-#modalL {
+#modal-l {
 	width: 400px;
 	height: 280px;
 	background-color: white;
@@ -148,7 +148,7 @@ body {
 	z-index: 60;
 }
 
-#closeL {
+#close-l {
 	position: absolute;
 	top: 0;
 	right: 14px;
@@ -160,7 +160,7 @@ body {
 
 
 /* Register Modal */
-#bg-modalR {
+#bg-modal-r {
 	width: 100%;
 	height: 100%;
 	background-color: rgba(0, 0, 0, 0.25);
@@ -173,7 +173,7 @@ body {
 	z-index: 50;
 }
 
-#modalR {
+#modal-r {
 	width: 400px;
 	height: 450px;
 	background-color: white;
@@ -185,7 +185,7 @@ body {
 	z-index: 60; 
 }
 
-#closeR {
+#close-r {
 	position: absolute;
 	top: 0;
 	right: 14px;
@@ -225,7 +225,7 @@ body {
 	height: auto;
 }
 
-.submitButton {
+.submit-button {
 	background-color: #58AFDB;
 	color: white;
 	font-size: 18px;
@@ -237,7 +237,7 @@ body {
 	transition: .3s ease-in-out;
 }
 
-.submitButton:focus {
+.submit-button:focus {
 	outline: none;
 	transform: scale(1.1);
 	border: none;
@@ -245,7 +245,7 @@ body {
 	box-shadow: -2px 2px 2px rgba(100, 100, 100, 0.75);
 }
 
-.submitButton:hover {
+.submit-button:hover {
 	cursor: pointer;
 	transform: scale(1.1);
 	border: none;
@@ -266,7 +266,7 @@ footer {
 
 
 /* nav bar */
-.siteBanner {
+.site-banner {
 	width: 100%;
 	height: 150px;
 	background-color: #EEE; 
@@ -277,17 +277,17 @@ footer {
 	align-items: flex-end;
 }
 
-#trendingLogo {
+#kaleidos-logo {
 	text-align: left;
 	margin: 20px 25px;
 }
 
-.mainLinks {
+.main-links {
 	top: 100px;
 	padding: 40px 0;
 }
 
-.navButton {
+.nav-button {
 	text-decoration: none;
 	margin: 20px;
 	color: #656471;
@@ -295,12 +295,12 @@ footer {
 	top: 100px;
 }
 
-.navButton:hover {
+.nav-button:hover {
 	cursor: pointer;
 	transform: scale(1.1);
 }
 
-.navButton:visited {
+.nav-button:visited {
 	color: #656471;
 }
 
