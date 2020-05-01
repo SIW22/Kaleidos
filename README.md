@@ -3,15 +3,13 @@
 
 ## Wireframes
 ---
-![ERD](public/images/coversheet.jpg)
-![ERD](public/images/login.jpg)
-![ERD](public/images/register.jpg)
-![ERD](public/images/browseall.jpg)
-![ERD](public/images/bybrand.jpg)
-![ERD](public/images/bystyle.jpg)
-![ERD](public/images/byprice.jpg)
-![ERD](public/images/cart.jpg)
-![ERD](public/images/purchase.jpg)
+![ERD](public/images/Kaleidos_Splash.jpg)
+![ERD](public/images/Kaleidos_Login.jpg)
+![ERD](public/images/Kaleidos_Index.jpg)
+![ERD](public/images/Kaleidos_New.jpg)
+![ERD](public/images/Kaleidos_Show.jpg)
+![ERD](public/images/Kaleidos_Edit.jpg)
+![ERD](public/images/Kaleidos_Delete.jpg)
 
 ## User Stories
 
@@ -20,7 +18,6 @@
 -Users can add images and descriptions of virtually anything.
 -Once added, items added can be edited or deleted.
 -1 user may have numerous collections of items, which can be sorted by category. 
-
 
 ---
 
