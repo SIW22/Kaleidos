@@ -1,23 +1,41 @@
-<%- include('../partials/_head') %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/css/main.css" rel="stylesheet">
+    <title>Trending || <%= title %> </title>
+</head>
+<body> 
+	<% if (typeof error !== 'undefined') { %>
+		<h1 style="position: absolute; color: rgb(184, 41, 41); width: 100%; text-align: center; font-size: 30px"><%= error %></h1>
+	<% } %>
 
-<% if (typeof error !== 'undefined') { %>
-	<%= error %>
-<% } %>
+	<main style="text-align: center;">
 
-	<main>
-		<h1>Login</h1>
+		<div class="bg" style="background-color:rgb(191,191,191);">
+			
+			<img src="/images/trending_logo.svg" alt="" height="150px" style="position: absolute;">
 
-		<form action="/auth/login" method="POST">
-			<div>
-				<label for="username">Username</label>
-				<input type="text" id="username" name="username"/>
+			<div id="modalL">
+
+				<button id="btntest" type="button" onclick="window.location.href = '../'" style="float: right; border: 0; padding: 0; font-size: 38px; transform: rotate(45deg); cursor: pointer">+</button>
+					
+				<h2>Login to your account</h2>
+						
+				<form action="/auth/login" method="POST">
+			
+					<input class="field" type="text" id="username" name="username" placeholder="Username">
+			
+					<input class="field" type="text" id="password" name="password" placeholder="Password">
+			
+					<input type="submit" class="submitButton" value="Login">
+			
+					<h5 class="acc-instruction">New to Trending? <a id="Rbutton" href="/auth/register">Create an account</a></h5>
+			
+				</form>
 			</div>
-			<div>
-				<label for="password">Password</label>
-				<input type="password" id="password" name="password"/>
-			</div>
-			<input type="submit" value="login">
-		</form>
+		</div>
 	</main>
 
 	<%- include('../partials/_footer') %>
