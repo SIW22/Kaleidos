@@ -63,7 +63,6 @@ router.post('/', multipartMiddleware, (req,res) => {
                 return console.log(err);
             }
             res.redirect('/products');
-            console.log('hello');
         });
     });
 });
@@ -98,69 +97,20 @@ router.get('/:id/edit', (req, res) => {
 
 
 /* ------------ PUT Products Update ------------ */
-
-// UPDATE IMAGE
-// router.put('/:id/', multipartMiddleware, (req, res) => {
-//     console.log(req.body);
-//     console.log(req.files.image);
-//     console.log(req.files.image.originalFilename);
-//     if (req.files.image.originalFilename) {
-//         let body = (req.body);
-//         cloudinary.uploader.upload(req.files.image.path,
-//             (result) => {
-//                 console.log('from cloudinary', result);
-//                 body = {
-//                     ...body,
-//                     image: result.secure_url
-//                 }
-//                 console.log(body);
-//                 db.Product.findByIdAndUpdate(
-//                     req.params.id,
-//                     body,
-//                     {new: true},
-//                     (err, updatedProduct) => {
-//                         if (err) {
-//                             return res.send(err);
-//                         }
-//                         res.redirect(`/products/${req.params.id}`);
-//                     }
-//                 )
-//             }) 
-//         } 
-// })
-
-// CAN UPDATE DESCRIPTION BUT NOT IMAGE
 router.put('/:id/', multipartMiddleware, (req, res) => {
-    console.log(req.body);
-    console.log(req.files.image);
-    console.log(req.files.image.originalFilename);
-    let body = (req.body);
-    cloudinary.uploader.upload(req.files.image.path,
-        (result) => {
-            console.log('from cloudinary', result);
-            body = {
-                ...body,
-                image: result.secure_url
+    db.Product.findByIdAndUpdate(
+        req.params.id,
+        req.body,
+        {new: true},
+        (err, updatedProduct) => {
+            if (err) {
+                return res.send(err);
             }
-            console.log(body);
-            
-        })
-        db.Product.findByIdAndUpdate(
-            req.params.id,
-            req.body,
-            {new: true},
-            (err, updatedProduct) => {
-                if (err) {
-                    return res.send(err);
-                }
-                res.redirect(`/products/${updatedProduct.id}`);
-            }
-        )
-    
-})
+            res.redirect(`/products/${updatedProduct.id}`);
+        }
+    )
+});
 
-
-    
 
 /* ---------- DELETE Products Destroy ---------- */
 router.delete('/:id', (req, res) => {

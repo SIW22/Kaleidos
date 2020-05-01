@@ -6,6 +6,7 @@
     <link href="/css/main.css" rel="stylesheet">
     <title>Trending || <%= title %> </title>
 </head>
+
 <body> 
     <div class="bg">
         <div class="title-slogan">
@@ -16,7 +17,7 @@
             </div>
         </div>
     </div>
-    <%- include('partials/_footer') %> 
+<%- include('partials/_footer') %> 
 
 
 
@@ -98,6 +99,7 @@
         event.preventDefault();
     });
 
+
     // EXIT MODAL
     Lclose.addEventListener('click', () => {
         bgModalL.style.display = 'none';
@@ -106,6 +108,7 @@
     Rclose.addEventListener('click', () => {
         bgModalR.style.display = 'none';
     });
+
 
     // transition to other modal
     Rbutton.addEventListener('click', () => {
