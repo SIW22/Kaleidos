@@ -30,7 +30,7 @@ router.get('/', (req, res) => {
             products: allProducts,
             title: 'Products',
         });
-    });
+    }).sort({[req.query.sort]: req.query.order});
 });
 
 
